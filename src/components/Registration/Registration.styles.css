@@ -1,0 +1,70 @@
+#submitBtn {
+    background-color: #DEFB82;
+    color: rgb(2, 2, 2);
+    border: none;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    font-family: assistant;
+    padding: 0.5rem 1rem;
+    height: fit-content;
+    box-shadow: none;
+    margin: 1rem 0;
+}
+
+
+:where(.css-dev-only-do-not-override-nnuwmp).ant-form-item .ant-form-item-label >label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    font-size: 2rem;
+}
+
+#submitBtn:hover {
+    background-color: #cce676;
+}
+
+.form-container {
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+
+}
+
+.inputs-container {
+    width: 90vw;
+    height: fit-content;
+}
+
+.form-input {
+    border: solid 1px black;
+    height: 4rem;
+    border-radius: 50px 50px 0 50px;
+    font-size: 1.2rem;
+    font-family: assistant;
+}
+
+.form-item {
+    font-size: 4rem;
+    font-family: assistant;
+}
+@media only screen and (min-width: 768px) {
+    #submitBtn {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .inputs-container {
+        width: 30vw;
+    }
+    
+    .form-input {
+        font-size: 1.5rem;
+    }
+
+}
+

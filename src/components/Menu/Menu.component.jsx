@@ -30,7 +30,6 @@ const Menu = (props) => {
   return (
     <div className='menu-container' ref={menuRef} >
       <div className="menu">
-        <div className='disclaimer'>מצטערים, ההרשמה אינה פתוחה כעת. פרטים נוספים ועדכונים יגיעו בהמשך.</div>
         <div className='menu-item' onClick={() => {handleClose(); navigate("/home"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
           <img className='menu-item-icon' src={home} />
           <div className='menu-item-header'>ראשי</div>
@@ -39,8 +38,8 @@ const Menu = (props) => {
           <img className='menu-item-icon' src={man} />
           <div className='menu-item-header'>רשימת המרצים</div>
         </div>
-        <div className='menu-item disabled-item'>
-          <img className='menu-item-icon' src={form} onClick={() => {handleClose(); navigate("/registration"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}} />
+        <div className='menu-item'  onClick={() => {handleClose(); navigate("/registration"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
+          <img className='menu-item-icon' src={form} />
           <div className='menu-item-header'>הרשמה - חינם!</div>
         </div>
         <div className='menu-item' onClick={() => {handleClose(); navigate("/contact"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>

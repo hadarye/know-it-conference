@@ -1,8 +1,8 @@
 import './ParticipantsPage.styles.css';
+import { useState, useRef } from 'react';
 import main1 from '../../media/images/people/shirlee.jpg';
 import main2 from '../../media/images/people/Elad_Darmon.jpeg';
-import fillerman from "../../media/images/man.svg";
-import fillerwoman from "../../media/images/woman.svg";
+import ParticipantCard from '../ParticipantCard/ParticipantCard.component';
 import person1 from '../../media/images/people/erik.jpg';
 import person2 from '../../media/images/people/gila_jpg.webp';
 import person3 from '../../media/images/people/yuval.jpeg';
@@ -13,19 +13,21 @@ import blob1 from '../../media/images/blob1.svg';
 import blob2 from '../../media/images/blob2.svg';
 
 const ParticipantsPage = () => {
+    const [isCard, setIsCard] = useState(false);
+    const objRef = useRef({});
     const MAIN_INFO = [{
         "img": main1,
-        "name": "שירלי ארמלנד חן",
-        "topic": "מסר ויזואלי שמניע לפעולה",
-        "bg": blob1,
-        "description": "איך מייצרים מסר ויזואלי בהיר שלא רק נראה מעולה, אלא, גם מסייע לנו להשפיע ואפילו מניע לפעולה?"
+        "name": "שירלי ארמלנד חן | מייסדת Present Station",
+        "topic": "מעבר לעיצוב",
+        "description": " יצירת תוצר למידה שמניע לפעולה.",
+        "full-text": "אנחנו יודעים לפצח תוצרי למידה כך שיתנו מענה לצרכים ולהרגלים של קהל היעד, לפתח אותם בפלטפורמות המתאימות וגם לעצב אותם כדי שיראו מעולה. אבל מה קורה אחר כך? איך נוכל לדאוג שהמסר החשוב ביותר מאותו תוצר למידה יישאר עם הלומד ואפילו יופץ הלאה? בהרצאה נלמד כיצד למיומנות ארגון המידע יש תפקיד משמעותי בתהליך. מדובר במיומנות שכל אחד מאתנו צריך לפתח, משום שהיא מסייעת לנו לייצר סיפור בין פריטי המידע (סטוריטלינג), ואחר כך להעביר אותו ללומד בשתי רמות: מילולית וויזואלית. כאשר הסיפור מועבר בשתי רמות המסר הללו, הלומד זוכר אותו בקלות, מסוגל להעבירו הלאה ואפילו ליישמו בצורה מדויקת יותר."
     },
     {
         "img": main2,
-        "name": "אלעד דרמון",
-        "topic": "עולם של בינה מלאכותית",
-        "bg": blob2,
-        "description": "איך להשתמש בעוצמה של כלים מבוססי AI, כדי לעצב את העתיד?"
+        "name": 'אלעד דרמון | מנכ"ל Digital Culture - תרבות דיגיטלית',
+        "topic": "העוצמה של הבינה ",
+        "description": "כלים מעשיים לשימוש בטכנולוגיה.",
+        "full-text": "חקר השינויים וההזדמנויות הרב-גוניות שהשילוב של בינה מלאכותית מכניס לאקדמיה, מעצב מחדש את הלמידה, המחקר ועתיד הפצת הידע."
     }]
 
     const SEATS = [{
@@ -64,8 +66,19 @@ const ParticipantsPage = () => {
         "topic": "הרצאה בנושא של ישראליות",
         "description": "זהו הסבר גנרי על הרצאות. מאוד חשוב לזכור שהרצאות הן דבר באמת חשוב ויפה ונחמד. אין על הרצאות בעולם."
     }]
+
+    const handleReadMore = (obj) => {
+        objRef.current = obj;
+        setIsCard(true);
+    }
+
+    const closeReadMore = () => {
+        setIsCard(false);
+    }
+
     return (
         <div className='participants-page'>
+            {isCard ? <ParticipantCard closeReadMore={closeReadMore} infoObj={objRef.current}></ParticipantCard> : null}
             <div className='main-container'>
                 <h1 className='participants-title'>מרצי מליאה</h1>
                 <div className='dark-card-container'>
@@ -80,17 +93,17 @@ const ParticipantsPage = () => {
                                 </div>
                             </div>
 
-                            <button className='read-more-btn'>קרא עוד</button>
+                            <button className='read-more-btn' onClick={() => handleReadMore(element)}>קרא עוד</button>
                         </div>
                     ))}
                 </div>
 
-                <h1 className='participants-title' style={{marginTop: '4rem'}}>מושבים</h1>
+                <h1 className='participants-title' style={{ marginTop: '4rem' }}>מושבים</h1>
                 <div className='secondary-card-container'>
                     {SEATS.map((element, index) => (
                         <div className='secondary-card' key={index}>
                             <div className='secondary-img' style={{ backgroundImage: `url(${element.img})` }}></div>
-                            
+
                             <div className='secondary-text-container'>
                                 <h2 className='secondary-topic'>{element.topic}</h2>
                                 <h6 className='secondary-name'>{element.name}</h6>
