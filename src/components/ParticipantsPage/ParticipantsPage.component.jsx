@@ -28,38 +28,13 @@ const ParticipantsPage = () => {
         "description": "איך להשתמש בעוצמה של כלים מבוססי AI, כדי לעצב את העתיד?"
     }]
 
-    const SEAT2 = [{
+    const SEATS = [{
         "img": person1,
-        "name": "ישראל ישראלי",
-        "topic": "הרצאה בנושא של ישראלים",
-        "description": "זהו הסבר גנרי על הרצאות. מאוד חשוב לזכור שהרצאות הן דבר באמת חשוב ויפה ונחמד. אין על הרצאות בעולם."
+        "name": "אלירן שקולניק",
+        "topic": "המהפכה המלאכותית",
+        "description": "בואו מצלול ונחשוף כלים וטכניקות מתקדמות בעבודה מול ai בצורה מדויקת שתחסוך כסף זמן והכי חשוב, אנרגיה."
     },
     {
-        "img": fillerwoman,
-        "name": "ישראלית ישראלית",
-        "topic": "הרצאה בנושא של ישראליות",
-        "description": "זהו הסבר גנרי על הרצאות. מאוד חשוב לזכור שהרצאות הן דבר באמת חשוב ויפה ונחמד. אין על הרצאות בעולם."
-    },
-    {
-        "img": fillerwoman,
-        "name": "ישראלית ישראלית",
-        "topic": "הרצאה בנושא של ישראליות",
-        "description": "זהו הסבר גנרי על הרצאות. מאוד חשוב לזכור שהרצאות הן דבר באמת חשוב ויפה ונחמד. אין על הרצאות בעולם."
-    },
-    {
-        "img": fillerwoman,
-        "name": "ישראלית ישראלית",
-        "topic": "הרצאה בנושא של ישראליות",
-        "description": "זהו הסבר גנרי על הרצאות. מאוד חשוב לזכור שהרצאות הן דבר באמת חשוב ויפה ונחמד. אין על הרצאות בעולם."
-    },
-    {
-        "img": fillerwoman,
-        "name": "ישראלית ישראלית",
-        "topic": "הרצאה בנושא של ישראליות",
-        "description": "זהו הסבר גנרי על הרצאות. מאוד חשוב לזכור שהרצאות הן דבר באמת חשוב ויפה ונחמד. אין על הרצאות בעולם."
-    }]
-
-    const SEAT1 = [{
         "img": person1,
         "name": "ישראל ישראלי",
         "topic": "הרצאה בנושא של ישראלים",
@@ -112,7 +87,7 @@ const ParticipantsPage = () => {
 
                 <h1 className='participants-title' style={{marginTop: '4rem'}}>מושבים</h1>
                 <div className='secondary-card-container'>
-                    {SEAT1.map((element, index) => (
+                    {SEATS.map((element, index) => (
                         <div className='secondary-card' key={index}>
                             <div className='secondary-img' style={{ backgroundImage: `url(${element.img})` }}></div>
                             
