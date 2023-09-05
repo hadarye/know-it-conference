@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+import { Routes, Route } from "react-router-dom";
+import MainPage from './components/MainPage/MainPage.component';
+import NavBar from "./components/NavBar/NavBar.component";
+import Menu from "./components/Menu/Menu.component";
+import ParticipantsPage from "./components/ParticipantsPage/ParticipantsPage.component";
+import ContactInfo from "./components/ContactInfo/ContactInfo.component";
+import { useState } from "react";
 import './App.css';
 
 function App() {
+  const event_date = new Date('2023-11-08T08:00:00');
+  const dateTimeAfterNumDays = event_date;
+  const [isMenu, setIsMenu] = useState();
+  const [isDate, setIsDate] = useState();
+
+  const handleMenu = (isShow) => {
+    if (isShow) {
+      setIsMenu(true);
+    } else {
+      setIsMenu(false);
+    }
+  }
+
+  const handleDate = (isShow) => {
+    if(isShow) {
+      setIsDate(true);
+    } else {
+      setIsDate(false);
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<><NavBar isOpen={isMenu} isDate={isDate} handleMenu={handleMenu}/><Menu isOpen={isMenu} handleMenu={handleMenu}/></>}>
+          <Route path="*" element={<MainPage handleDate={handleDate} targetDate={dateTimeAfterNumDays}/>}></Route>
+          <Route path="contact" element={<ContactInfo/>}></Route>
+          <Route path="lectures" element={<ParticipantsPage/>}></Route>
+        </Route>
+      </Routes>
     </div>
   );
 }

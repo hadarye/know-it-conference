@@ -1,0 +1,372 @@
+.main-page {
+    width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+
+
+.section {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding-top: 2rem;
+}
+
+.black-section1 {
+    background-color: #1C1C1C;
+    width: 100%;
+    height: 20rem;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; */
+}
+
+.white-section1 {
+    width: 100%;
+    height: 30rem;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-header {
+    font-size: 3rem;
+    width: 85%;
+    font-weight: 400;
+    text-align: right;
+    margin: 0 0 1rem 0;
+    color: #1C1C1C;
+}
+
+.small-text {
+    text-align: right;
+    width: 70%;
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+    color: #3E3C34;
+}
+
+.sign-btn {
+    background-color: #DEFB82;
+    color: rgb(2, 2, 2);
+    border: none;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    font-family: assistant;
+    padding: 0.5rem 1rem;
+}
+
+.sign-btn:hover {
+    background-color: #cce676;
+}
+
+.header {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    text-align: right;
+    width: 60vw;
+}
+
+.main-page-text {
+    font-size: 1.2rem;
+    text-align: right;
+    margin: 0;
+}
+
+.text-section {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 16rem;
+    flex-wrap: nowrap;
+}
+
+.white-section2 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.slider {
+    background-color: wheat;
+    width: 25%;
+    height: 20rem;
+    margin: 0 5rem 0 0;
+}
+
+.text-pic-section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0 0 0;
+}
+
+.text-pic-section1 {
+    flex-direction: row-reverse;
+}
+
+.text-pic-section2 {
+    flex-direction: column-reverse;
+}
+
+.logo-till {
+    background-image: url('../../media/images/logo-till.svg');
+    width: 25%;
+    height: 5rem;
+    margin: 0;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.black-section2 {
+    margin: 4rem 0;
+    background-color: #1C1C1C;
+    width: 100%;
+    height: 20rem;
+}
+
+.black-section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+
+.blue-circle {
+    width: 45rem;
+    height: 45rem;
+    background-color: #366CEB;
+    border-radius: 50%;
+}
+
+.blue-half-circle {
+    width: 40rem;
+    height: 25rem;
+    background-color: #366CEB;
+    border-radius: 0 0 50rem 50rem;
+}
+
+.try {
+    color: #D08EF6;
+    /* font-size: 16rem; */
+    font-weight: 800;
+}
+
+.throw-object {
+    width: 5rem;
+    height: 5rem;
+    background-color: #366CEB;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .main-page {
+        width: 100vw;
+        height: fit-content;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .section {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .section1 {
+        display: flex;
+        flex-direction: row;
+        background: linear-gradient(to right,
+                #1C1C1C 0%,
+                #1C1C1C 50%,
+                #FEFEFE 50%,
+                #FEFEFE 100%);
+    }
+
+    .black-section1 {
+        /* background-color: #1C1C1C; */
+        width: 50%;
+        height: 100vh;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; */
+    }
+
+    .white-section1 {
+        width: 50%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .main-header {
+        font-size: 6rem;
+        width: 70%;
+        font-weight: 400;
+        text-align: right;
+        margin: 0 0 1rem 0;
+        ;
+        color: #1C1C1C;
+    }
+
+    .small-text {
+        text-align: right;
+        width: 70%;
+        font-size: 2rem;
+        margin: 0 0 2rem 0;
+        color: #3E3C34;
+    }
+
+    .sign-btn {
+        background-color: #DEFB82;
+        color: rgb(2, 2, 2);
+        border: none;
+        border-radius: 15px;
+        font-size: 2rem;
+        font-family: assistant;
+        padding: 0.5rem 1rem;
+    }
+
+    .header {
+        font-size: 4rem;
+        font-weight: 400;
+        margin: 1rem 0;
+        text-align: right;
+        width: 60vw;
+    }
+
+    .main-page-text {
+        font-size: 2.5rem;
+        text-align: right;
+        margin: 1rem 0;
+    }
+
+    .text-section {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 20rem;
+        flex-wrap: nowrap;
+    }
+
+    .white-section2 {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .slider {
+        background-color: wheat;
+        width: 25%;
+        height: 20rem;
+        margin: 0 5rem 0 0;
+    }
+
+    .text-pic-section {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 6rem 0 0 0;
+    }
+
+    .text-pic-section1 {
+        flex-direction: row;
+    }
+
+    .text-pic-section2 {
+        flex-direction: row;
+    }
+
+    .logo-till {
+        background-image: url('../../media/images/logo-till.svg');
+        width: 25%;
+        height: 20rem;
+        margin: 0 0 0 5rem;
+        background-position: center;
+        background-size: 50%;
+        background-repeat: no-repeat;
+    }
+
+    .black-section2 {
+        margin: 7rem 0 0 0;
+        background-color: #1C1C1C;
+        width: 100%;
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .blue-circle {
+        width: 45rem;
+        height: 45rem;
+        background-color: #366CEB;
+        border-radius: 50%;
+    }
+
+    .blue-half-circle {
+        width: 40rem;
+        height: 25rem;
+        background-color: #366CEB;
+        border-radius: 0 0 50rem 50rem;
+    }
+
+    .try {
+        color: #D08EF6;
+        /* font-size: 16rem; */
+        font-weight: 800;
+    }
+
+    .throw-object {
+        width: 5rem;
+        height: 5rem;
+        background-color: #366CEB;
+    }
+
+
+}
