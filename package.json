@@ -1,7 +1,7 @@
 {
   "name": "knowit-2023",
   "version": "0.1.0",
-
+  "homepage": "http://madortill.github.io/knowit-2023/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
