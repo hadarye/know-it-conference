@@ -10,8 +10,13 @@
 
 .exhibition-container {
     width: 100%;
-    background-color: #1c1c1c;
-    height: 30rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .participants-page {

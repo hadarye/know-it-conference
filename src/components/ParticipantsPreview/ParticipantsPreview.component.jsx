@@ -1,60 +1,100 @@
 import './ParticipantsPreview.styles.css'
 import { useNavigate } from 'react-router-dom';
 import arrow from '../../media/images/arrow.png';
-import person1 from '../../media/images/people/erik.jpg';
-import person2 from '../../media/images/people/gila.jpg';
-import person3 from '../../media/images/people/yuval.jpeg';
-import person4 from '../../media/images/people/aviramdaniel.png';
-import person5 from '../../media/images/people/snir.jpg';
-import person6 from '../../media/images/people/mia.png';
-import person7 from '../../media/images/people/shirlee.jpg';
-import person8 from '../../media/images/people/Elad_Darmon.jpeg';
-import fillerman from '../../media/images/man.svg';
-import fillerwoman from '../../media/images/woman.svg';
+import eliran from '../../media/images/people/eliran.png';
+import yael from '../../media/images/people/yael.jpg'
+import erik from '../../media/images/people/erik.jpg';
+import gila from '../../media/images/people/gila.jpg';
+import daniel from '../../media/images/people/daniel_hackathon.jpg';
+import snir from '../../media/images/people/snir.jpg';
+import mia from '../../media/images/people/mia.png';
+import yaniv from '../../media/images/people/yaniv.jpg';
+import yonatan from '../../media/images/people/yonatan.jpeg';
+import dana from '../../media/images/people/dana.png';
+import nir from '../../media/images/people/nir.jpg';
+import orit from '../../media/images/people/orit.jpg';
+import nethanel from '../../media/images/people/nethanel.jpg';
+import eden from '../../media/images/people/eden.png';
+import leaKeren from '../../media/images/people/lea+karan.png';
 
 const ParticipantsPreview = () => {
     const navigate = useNavigate();
     const PEOPLE = [
         {
-            "src": person7,
+            "src": eliran,
             "name": "",
             "title": ""
         },
         {
-            "src": person8,
+            "src": yael,
             "name": "",
             "title": ""
         },
         {
-            "src": person3,
+            "src": erik,
             "name": "",
             "title": ""
         },
         {
-            "src": person2,
+            "src": gila,
             "name": "",
             "title": ""
         },
         {
-            "src": person1,
+            "src": daniel,
             "name": "",
             "title": ""
         },
         {
-            "src": person4,
+            "src": snir,
             "name": "",
             "title": ""
         },
         {
-            "src": person5,
+            "src": mia,
             "name": "",
             "title": ""
         },
         {
-            "src": person6,
+            "src": yaniv,
             "name": "",
             "title": ""
         },
+        {
+            "src": yonatan,
+            "name": "",
+            "title": ""
+        },
+        {
+            "src": dana,
+            "name": "",
+            "title": ""
+        },
+        {
+            "src": nir,
+            "name": "",
+            "title": ""
+        },
+        {
+            "src": orit,
+            "name": "",
+            "title": ""
+        },
+        {
+            "src": nethanel,
+            "name": "",
+            "title": ""
+        },
+        {
+            "src": eden,
+            "name": "",
+            "title": ""
+        },
+        {
+            "src": leaKeren,
+            "name": "",
+            "title": ""
+        }
         
     ]
     return (

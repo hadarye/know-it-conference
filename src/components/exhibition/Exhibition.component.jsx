@@ -34,7 +34,9 @@ const Exhibition = () => {
     ]
     return(
         <>
-        
+            {LOGOS.map((image) => (
+            <img className='exhibition-logo' src={image}/>
+        ))}
         </>
     )
 }

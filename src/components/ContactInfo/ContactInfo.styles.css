@@ -9,12 +9,13 @@
 
 .black-contact {
     width: 90%;
-    height: 50%;
+    height: 30%;
     background-color: #1c1c1c;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .contact-header {
@@ -25,33 +26,55 @@
     margin: 0;
     color: #1c1c1c;
 }
+.contact-txt {
+    font-size: 3rem;
+    font-weight: 400;
+    width: 20rem;
+    margin: 0;
+    height: fit-content;
+}
+
+.mail {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
 
 @media only screen and (min-width: 768px) {
     .contact-info {
         width: 100vw;
         height: 100vh;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
+
     .black-contact {
-        width: 90%;
-        height: 50%;
-        background-color: #1c1c1c;
-        /* position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); */
+        width: 60%;
+        height: 15rem;
+        justify-content: space-around;
+        flex-direction: row;
     }
-    
+
     .contact-header {
         font-size: 7rem;
-        /* position: absolute; */
-        width: 90%;
+        width: 60%;
         text-align: right;
         margin: 0;
         color: #1c1c1c;
+    }
+
+    .contact-txt {
+        font-size: 3rem;
+        font-weight: 400;
+        width: 20rem;
+        margin: 0;
+        height: fit-content;
+    }
+
+    .mail {
+        margin: 0;
+        font-size: 5rem;
+        font-weight: 400;
     }
 }

@@ -1,5 +1,6 @@
 import './ParticipantsPage.styles.css';
 import { useState, useRef } from 'react';
+import Exhibition from '../exhibition/Exhibition.component';
 import main1 from '../../media/images/people/shirlee.jpg';
 import main2 from '../../media/images/people/Elad_Darmon.jpeg';
 import ParticipantCard from '../ParticipantCard/ParticipantCard.component';
@@ -7,7 +8,6 @@ import eliran from '../../media/images/people/eliran.png';
 import yael from '../../media/images/people/yael.jpg'
 import erik from '../../media/images/people/erik.jpg';
 import gila from '../../media/images/people/gila.jpg';
-import yuval from '../../media/images/people/yuval.jpeg';
 import daniel from '../../media/images/people/daniel_hackathon.jpg';
 import snir from '../../media/images/people/snir.jpg';
 import mia from '../../media/images/people/mia.png';
@@ -18,8 +18,7 @@ import nir from '../../media/images/people/nir.jpg';
 import orit from '../../media/images/people/orit.jpg';
 import nethanel from '../../media/images/people/nethanel.jpg';
 import eden from '../../media/images/people/eden.png';
-import blob1 from '../../media/images/blob1.svg';
-import blob2 from '../../media/images/blob2.svg';
+import leaKeren from '../../media/images/people/lea+karan.png';
 
 const ParticipantsPage = () => {
     const [isCard, setIsCard] = useState(false);
@@ -136,7 +135,14 @@ const ParticipantsPage = () => {
         "topic": "הטמעת תוצרי הדרכה",
         "description": "הטמעת תוצרי הדרכה מקריית-שמונה ועד אילת.",
         "full-text": "הטמעת תוצרי הדרכה מקריית-שמונה ועד אילת. איך אנחנו מכשירים אלפי מתנדבים בשנה בכל הארץ עם רמה מקצועית אחידה?"
-    },]
+    },
+    {
+        "img": leaKeren,
+        "name": 'ליאה אפגין  + קארן קמנצקי',
+        "topic": "שותפי למידה",
+        "description": "מערך הלמידה והפיתוח הארגוני אמון על ההתפתחות האישית, הניהולית והמקצועית, והמחוברות של עובדי מכבי.",
+        "full-text": "מערך הלמידה והפיתוח הארגוני אמון על ההתפתחות האישית, הניהולית והמקצועית, והמחוברות של עובדי מכבי. אחד האמצעים המרכזיים להשגת המטרות הוא בנייה ופיתוח של קהילת שותפי למידה והפיכתם לכוח מקצועי, מכפיל כח של המערך. עובדים בתפקידים שונים: מובילי למידה, מדריכים פנימיים, מנטורים, מייקרים ויועצי קריירה המהווים זרוע נוספת שלנו ליצירת למידה עדכנית, רלבנטית וחדשנית."
+    }]
 
 
     const handleReadMore = (obj) => {
@@ -190,25 +196,8 @@ const ParticipantsPage = () => {
 
                 <h1 className='participants-title'>תערוכות</h1>
                 <div className='exhibition-container'>
-                    <div></div>
+                    <Exhibition></Exhibition>
                 </div>
-
-                {/* <h1 className='participants-title'>מושב שני</h1>
-                <div className='secondary-card-container'>
-                    {SEAT2.map((element, index) => (
-                        <div className='secondary-card' key={index}>
-                            <div className='secondary-img' style={{ backgroundImage: `url(${element.img})` }}></div>
-                            <div className='secondary-text-container'>
-                                <h2 className='secondary-topic'>{element.topic}</h2>
-                                <h6 className='secondary-name'>{element.name}</h6>
-                                <p className='secondary-text'>{element.description}</p>
-                                <button className='read-more-btn-secondary'>קרא עוד</button>
-                            </div>
-                        </div>
-                    ))}
-                </div> */}
-
-
 
             </div>
             <div>
