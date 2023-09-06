@@ -39,7 +39,7 @@ const NavBar = (props) => {
         </motion.div>
       </div>
       <div className='icon-container nav-bar-container'>
-        <div className='nav-icon' ref={navIconRef} onClick={() => { handleMenuBtn();}}>
+        <div className='nav-icon open-nav' ref={navIconRef} onClick={() => { handleMenuBtn();}}>
           <span></span>
           <span></span>
           <span></span>
