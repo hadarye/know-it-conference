@@ -22,78 +22,48 @@ const ParticipantsPreview = () => {
     const PEOPLE = [
         {
             "src": eliran,
-            "name": "",
-            "title": ""
         },
         {
             "src": yael,
-            "name": "",
-            "title": ""
         },
         {
             "src": erik,
-            "name": "",
-            "title": ""
         },
         {
             "src": gila,
-            "name": "",
-            "title": ""
         },
         {
             "src": daniel,
-            "name": "",
-            "title": ""
         },
         {
             "src": snir,
-            "name": "",
-            "title": ""
         },
         {
             "src": mia,
-            "name": "",
-            "title": ""
         },
         {
             "src": yaniv,
-            "name": "",
-            "title": ""
         },
         {
             "src": yonatan,
-            "name": "",
-            "title": ""
         },
         {
             "src": dana,
-            "name": "",
-            "title": ""
         },
         {
             "src": nir,
-            "name": "",
-            "title": ""
         },
         {
             "src": orit,
-            "name": "",
-            "title": ""
         },
         {
             "src": nethanel,
-            "name": "",
-            "title": ""
         },
         {
             "src": eden,
-            "name": "",
-            "title": ""
         },
         {
             "src": leaKeren,
-            "name": "",
-            "title": ""
         }
         
     ]
