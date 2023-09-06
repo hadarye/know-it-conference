@@ -1,6 +1,6 @@
 import './MainPage.styles.css';
-import { motion, useScroll, useAnimation, useInView } from "framer-motion";
-import { useEffect, useState, useRef } from 'react';
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SquareDetails from '../SquareDetails/SquareDetails.component';
 import CountdownTimer from '../countdown/CountdownTimer.component';
@@ -37,7 +37,7 @@ const MainPage = (props) => {
                 <div className='white-section1'>
 
                     <h1 className='main-header'>למידה מעולם לא הייתה חדשנית יותר.</h1>
-                    <p className='small-text'>כנס חדשנות בלמידה 2023</p>
+                    <p className='small-text'>הכנס הצה״לי לחדשנות בלמידה 2023</p>
                     <button className='sign-btn pointer' onClick={() => navigate("/registration")}>להרשמה</button>
                 </div>
                 <div className='black-section1' ref={motionRefBlack}>

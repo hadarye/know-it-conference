@@ -1,20 +1,12 @@
 import './SquareDetails.styles.css';
-import calendar from '../../media/images/calendar.png';
-import waze from '../../media/images/waze.png';
 import InfoIcons from '../InfoIcons/InfoIcons.component'
-import bg1 from '../../media/images/blue1.svg';
-import bg2 from '../../media/images/green2.svg';
-import bg3 from '../../media/images/black3.svg';
-import bg4 from '../../media/images/green4.svg';
-import bg5 from '../../media/images/white5.svg';
-import bg6 from '../../media/images/blue6.svg';
 
 const SquareDetails = (props) => {
 
     const INFO = [
         {
             "title": "למי?",
-            "text": "כ-1000 מפתחי ומנהלי הדרכה מיחידות צה״ל, מהאקדמיה ומגופי הדרכה נוספים במגזר הציבורי, הפרטי והבטחוני.",
+            "text": "כ-800 מפתחי ומנהלי הדרכה מיחידות צה״ל, מהאקדמיה ומגופי הדרכה נוספים במגזר הציבורי, הפרטי והבטחוני.",
             "id": "bg1"
         },
         {
@@ -24,7 +16,7 @@ const SquareDetails = (props) => {
         },
         {
             "title": "מתי?",
-            "text": "הכנס יתקיים ביום רביעי ה-8 בנומבר 2023 בין השעות 8:00-14:00.",
+            "text": "הכנס יתקיים ביום רביעי ה-8 בנובמבר 2023 בין השעות 8:30-14:30.",
             "id": "bg3"
         },
         {

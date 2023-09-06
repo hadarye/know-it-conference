@@ -1,7 +1,5 @@
 import 'add-to-calendar-button';
 import { atcb_action } from 'add-to-calendar-button';
-import { AddToCalendarButton } from 'add-to-calendar-button-react';
-import calendar from '../../media/images/calendar.png';
 import waze from '../../media/images/waze.png';
 import "./InfoIcons.styles.css";
 
