@@ -8,7 +8,7 @@
     padding: 0.5rem 1rem;
     height: fit-content;
     box-shadow: none;
-    margin: 1rem 0;
+    margin: 1rem 0 2rem 0;
 }
 
 
@@ -71,10 +71,19 @@
      display: block;
 }
 
+.registration-text {
+    font-size: 1.5rem;
+}
+
 @media only screen and (min-width: 768px) {
     #submitBtn {
         font-size: 2rem;
         padding: 0.5rem 1rem;
+    }
+
+    .registration-text {
+        font-size: 1.7rem;
+        margin: 0 0 1rem 0;
     }
     
     .inputs-container {

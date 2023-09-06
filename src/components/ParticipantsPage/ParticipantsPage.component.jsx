@@ -97,7 +97,7 @@ const ParticipantsPage = () => {
     },
     {
         "img": nir,
-        "name":' ניר כהן |  מנכ"ל Insomnia',
+        "name": ' ניר כהן |  מנכ"ל Insomnia',
         "topic": "מגמגום לדיבור",
         "description": "סימולטור ככלי מבריא",
         "full-text": "סימולטור ככלי מבריא שימוש בטכנולוגית VR לתהליכי למידה."
@@ -125,14 +125,14 @@ const ParticipantsPage = () => {
     },
     {
         "img": eden,
-        "name":'עדן ביבס',
+        "name": 'עדן ביבס',
         "topic": "איך להשתמש נכון בצ'אט GPT?",
         "description": "בהרצאה נבין מהי בינה מלאכותית, ונעמיק בצ'אטבוט הפופולארי ביותר בעולם - ChatGPT. ",
         "full-text": "בהרצאה נבין מהי בינה מלאכותית, ונעמיק בצ'אטבוט הפופולארי ביותר בעולם - ChatGPT. נלמד מה היכולות והמגבלות שלו, איפה ניתן לסמוך עליו ואיפה פחות, איך נכון לדבר איתו כדי לקבל תוצרים מעולים, וכמובן - איך הוא תכל'ס יכול לעזור לנו בחיים כדי לעבוד בצורה אפקטיבית יותר. עדן ביבס הוא מייסד מועדון AI-Life ויוצר תוכן בעולמות הבינה המלאכותית."
     },
     {
         "img": snir,
-        "name":'פיינשטיין שניר',
+        "name": 'פיינשטיין שניר',
         "topic": "הטמעת תוצרי הדרכה",
         "description": "הטמעת תוצרי הדרכה מקריית-שמונה ועד אילת.",
         "full-text": "הטמעת תוצרי הדרכה מקריית-שמונה ועד אילת. איך אנחנו מכשירים אלפי מתנדבים בשנה בכל הארץ עם רמה מקצועית אחידה?"
@@ -177,9 +177,11 @@ const ParticipantsPage = () => {
                             <div className='secondary-img' style={{ backgroundImage: `url(${element.img})` }}></div>
 
                             <div className='secondary-text-container'>
-                                <h2 className='secondary-topic'>{element.topic}</h2>
-                                <h6 className='secondary-name'>{element.name}</h6>
-                                <p className='secondary-text'>{element.description}</p>
+                                <div>
+                                    <h2 className='secondary-topic'>{element.topic}</h2>
+                                    <h6 className='secondary-name'>{element.name}</h6>
+                                    <p className='secondary-text'>{element.description}</p>
+                                </div>
                                 <button className='read-more-btn-secondary' onClick={() => handleReadMore(element)}>קרא עוד</button>
                             </div>
                         </div>

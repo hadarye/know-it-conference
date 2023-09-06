@@ -15,47 +15,39 @@ const SquareDetails = (props) => {
         {
             "title": "למי?",
             "text": "כ-1000 מפתחי ומנהלי הדרכה מיחידות צה״ל, מהאקדמיה ומגופי הדרכה נוספים במגזר הציבורי, הפרטי והבטחוני.",
-            "bg": bg3,
-            "color": "white",
-            "id": "bg3"
+            "id": "bg1"
         },
         {
             "title": "איפה?",
             "text": "קריית ההדרכה (עיר הבה״דים) - מחנה אריאל שרון. לטובת המשתתפים יועמד שירות הסעות ממספר מקומות מרכזיים.",
-            "bg": bg6,
-            "id": "bg6"
+            "id": "bg2"
         },
         {
             "title": "מתי?",
             "text": "הכנס יתקיים ביום רביעי ה-8 בנומבר 2023 בין השעות 8:00-14:00.",
-            "bg": bg2,
-            "id": "bg2"
+            "id": "bg3"
         },
         {
             "title": "מה בתוכנית?",
             "text": "הרצאות מעוררות השראה, סדנאות ייחודיות, תערוכת ספקים מגוונת, חשיפה לאמצעים דיגיטליים חדשניים ואוכל טוב.",
-            "bg": bg5,
-            "color": "white",
-            "id": "bg5"
+            "id": "bg4"
         },
         {
             "title": "עלות?",
             "text": "ההשתתפות בכנס הינה ללא עלות.",
-            "bg": bg1,
-            "color": "white",
-            "id": "bg1"
+            "id": "bg5"
         }
     ]
 
     return (
         <div className="detail-squars">
             {INFO.map((element, index) => (
-                <div id={element.id} className='square' key={index} style={{color: element.color}}>
+                <div id={element.id} className='square' key={index}>
                     <h2 className='square-title'>{ element.title }</h2>
                     <p className='square-text'>{ element.text }</p>
                 </div>
             ))}
-            <div className='square' id="bg4" style={{ justifyContent: 'center'}}>
+            <div className='square' id="bg6" style={{ justifyContent: 'center'}}>
                 <div className='icons-container-square'>
                     <InfoIcons></InfoIcons>
 

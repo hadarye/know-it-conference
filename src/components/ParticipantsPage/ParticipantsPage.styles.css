@@ -32,7 +32,6 @@
     border-radius: 100%;
     background-position: center;
     background-size: cover;
-    /* flex-shrink: 0; */
     margin-top: 1rem;
 }
 
@@ -157,6 +156,7 @@
     margin: 1rem 0;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 }
 
 .secondary-card-container {
@@ -169,17 +169,26 @@
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
+    text-align: right;
+}
+
+.secondary-text-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: space-between;
 }
 
 .secondary-img {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 100%;
     background-position: center;
     background-size: cover;
     flex-shrink: 0;
-    margin: 2rem 2rem 2rem 0;
-    box-shadow: -2em 0 0 0 #defb82;
+    margin: 2rem 0;
+    box-shadow: -1em 0 0 0 #defb82;
 }
 
 .read-more-btn-secondary {
@@ -191,7 +200,7 @@
     border: none;
     border-radius: 15px;
     padding: 0.5rem 1rem;
-    margin: 1rem 1rem 0 0;
+    margin: 0 1rem 1rem 0;
     align-self: flex-end;
     cursor: pointer;
 }
@@ -202,20 +211,30 @@
         flex-direction: row;
     }
 
+    .secondary-text-container {
+        width: 60%;
+        flex-direction: column;
+        height: 22rem;
+        justify-content: space-between;
+    }
+
+    .secondary-text {
+        font-size: 1.7rem;
+        margin: 0 0 1rem 0;
+    }
+
+    .secondary-topic {
+        font-size: 2rem;
+        margin: 2rem 0 1rem 0;
+    }
     
     .dark-card-container {
-        display: flex;
         flex-direction: row;
         width: 90%;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
-        flex-wrap: wrap;
     }
 
     .secondary-card-container::-webkit-scrollbar {
         height: 10px;
-        /* background-color: white; */
     }
 
     .participants-page {
@@ -224,9 +243,6 @@
     }
 
     .main-text-container {
-        display: flex;
-        flex-direction: column;
-        text-align: right;
         margin-right: 3rem;
         width: 55%;
     }
@@ -234,41 +250,20 @@
     .main-img {
         width: 20rem;
         height: 20rem;
-        border-radius: 100%;
-        background-position: center;
-        background-size: cover;
-        flex-shrink: 0;
         margin-top: 2rem;
     }
 
     .participants-title {
-        color: black;
         font-size: 7rem;
         margin: 2rem 0;
         margin-top: 10rem;
-        width: 90%;
-        text-align: right;
-    }
-
-    .main-container {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
     }
 
     .read-more-btn-secondary {
-        color: rgb(255, 255, 255);
         width: 10rem;
         font-size: 1.5rem;
-        font-family: assistant;
-        background-color: #1c1c1c;
-        border: none;
-        border-radius: 15px;
-        padding: 0.5rem 1rem;
-        margin: 2rem 1rem 0 0;
+        margin: 0 0 2rem 2rem;
         align-self: flex-end;
-        cursor: pointer;
     }
 
     .read-more-btn {
@@ -279,15 +274,7 @@
 
     .dark-card {
         width: 48%;
-        height: max-content;
-        background-color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: solid 1px black;
         margin: 2rem 0;
-        /* background-size: 100% 100%;
-        background-repeat: no-repeat; */
         border-radius: 250px 250px 0 250px;
     }
 
@@ -295,7 +282,6 @@
         font-size: 2.5rem;
         margin: 2rem 0 0 0;
     }
-
 
     .main-text {
         font-size: 1.7rem;
@@ -311,6 +297,7 @@
         margin: 2rem 2rem;
         justify-content: space-between;
         align-items: center;
+        flex-direction: row;
     }
 
     .secondary-card-container {
@@ -323,16 +310,7 @@
     .secondary-img {
         width: 18rem;
         height: 18rem;
-        border-radius: 100%;
-        background-position: center;
-        background-size: cover;
-        flex-shrink: 0;
         margin: 2rem 2rem 2rem 0;
         box-shadow: -2.5em 0 0 0 #defb82;
     }
-
-
-
-
-
 }

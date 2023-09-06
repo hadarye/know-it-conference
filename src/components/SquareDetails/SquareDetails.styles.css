@@ -9,40 +9,36 @@
     align-items: center;
 }
 
-#bg1 {
+#bg1,
+#bg3,
+#bg5 {
     background-color: #1c1c1c;
+    color: white;
+
+}
+
+#bg1 {
     border-radius: 250px 10px 10px 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #bg2 {
-    background-color: #ffffff;
     border-radius: 250px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #bg3 {
-    background-color: #1c1c1c;
     border-radius: 10px 250px 10px 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #bg4 {
-    background-color: #ffffff;
     border-radius: 10px 10px 10px 250px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #bg5 {
-    background-color: #1c1c1c;
     border-radius: 250px 250px 10px 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #bg6 {
-    background-color: #ffffff;
     border-radius: 250px 10px 250px 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .square-title {
@@ -53,14 +49,13 @@
 
 .square {
     width: 100%;
-    /* height: 36%; */
     background-color: white;
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .square:hover {
@@ -89,6 +84,7 @@
         align-content: center;
         justify-content: center;
         margin: 8rem 0;
+        flex-direction: row-reverse;
     }
 
     .square-title {

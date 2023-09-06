@@ -22,7 +22,7 @@ const MainPage = (props) => {
 
     const DATA = [
         'כנס חדשנות בלמידה הצה״לי, החמישי במספר מיועד למגוון קהלים בתחום החינוך והלמידה. בכנס זה יתקיימו הרצאות מרתקות ומגוון פאנלים בנושא החדשנות בלמידה, המיועדים למפתחי הדרכה בכירים, מנהלי הדרכה בארגון, אנשי חינוך, הוראה ולמידה בצה"ל, כוחות הבטחון השונים, אקדמיה וגופי חינוך ולמידה בארגונים השונים.',
-        'מדור טי״ל של ענף הדרכה בקריית ההדרכה בנגב מתמחה ביצירת תוצרים דיגיטליים וחדשניים להדרכה. תוצריו מגיעים להדרכות השונות ולקורסים בקריית ההדרכה ובצה״ל ככלל. גם השנה אנו גאים לארח אתכם בכנס חדשני ומיוחד במינו.'
+        'ענף הדרכה בקריית ההדרכה שבנגב מוביל את התחום ההדרכה בקריית ההדרכה, תוך פיתוח והטמעת שיטות ואמצעי הדרכה מתקדמים, מהווה מוקד ידע הדרכתי בתחומי פיתוח והערכת הדרכה. גם השנה אני גאים להזמין אתכם להתארח בכנס חדשני ומיוחד במינו.'
     ]
 
     useEffect(() => {
@@ -54,7 +54,7 @@ const MainPage = (props) => {
 
                         <div className='text-section text-section1'>
                             <motion.div className='text-section' ref={motionRef1} style={{ transform: isInView1 ? "none" : "translateX(300px)", opacity: isInView1 ? 1 : 0, transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)" }}>
-                                <h1 className='header'>KNOW IT?</h1>
+                                <h1 className='header'>על הכנס</h1>
                                 <p className="main-page-text">{DATA[0]}</p>
                             </motion.div>
                         </div>
@@ -66,7 +66,7 @@ const MainPage = (props) => {
                         <div className='logo-till'></div>
                         <div className='text-section text-section2'>
                             <motion.div ref={motionRef2} style={{ transform: isInView2 ? "none" : "translateX(-300px)", opacity: isInView2 ? 1 : 0, transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)" }}>
-                                <h1 className='header'>מדור טי״ל</h1>
+                                <h1 className='header'>ענף ההדרכה של קריית ההדרכה</h1>
                                 <p className="main-page-text">{DATA[1]}</p>
                             </motion.div>
                         </div>

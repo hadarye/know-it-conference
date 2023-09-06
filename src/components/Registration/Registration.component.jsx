@@ -39,7 +39,7 @@ const Registration = () => {
     return (
         <div className='form-container'>
             <h1 className='participants-title' style={{textAlign: `center`, margin: `10rem 0 0 0`}}>הרשמה לכנס</h1>
-            <p  style={{fontSize: `2rem`}}>ההרשמה מיועדת לאנשים העוסקים בפיתוח הדרכה באזרחות ובצבא, ולמנהלי
+            <p  className='registration-text'>ההרשמה מיועדת לאנשים העוסקים בפיתוח הדרכה באזרחות ובצבא, ולמנהלי
           הדרכה.</p>
             <Form
                 form={form}
@@ -47,14 +47,11 @@ const Registration = () => {
                 layout="vertical"
             >
                 <div className='inputs-container'>
-
-
                     <Form.Item
                         className='form-item'
                         name="email"
                         label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>מייל:</label>}
                         rules={[{ required: true, message: 'אנא הכניסו את המייל שלכם.' }]}
-
                     >
                         <Input className='form-input' />
                     </Form.Item>
