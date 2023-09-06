@@ -2,11 +2,11 @@ import './ParticipantsPreview.styles.css'
 import { useNavigate } from 'react-router-dom';
 import arrow from '../../media/images/arrow.png';
 import person1 from '../../media/images/people/erik.jpg';
-import person2 from '../../media/images/people/gila_jpg.webp';
+import person2 from '../../media/images/people/gila.jpg';
 import person3 from '../../media/images/people/yuval.jpeg';
 import person4 from '../../media/images/people/aviramdaniel.png';
 import person5 from '../../media/images/people/snir.jpg';
-import person6 from '../../media/images/people/adi.jpg';
+import person6 from '../../media/images/people/mia.png';
 import person7 from '../../media/images/people/shirlee.jpg';
 import person8 from '../../media/images/people/Elad_Darmon.jpeg';
 import fillerman from '../../media/images/man.svg';

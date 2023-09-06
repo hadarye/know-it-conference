@@ -4,55 +4,61 @@
     display: flex;
 }
 
-.cover-objects {
-    width: 100%;
-    height: 4rem;
-    background-color: #1c1c1c;
-    position: relative;
-    align-self: flex-end;
-    /* background-image: url('../../media/images/headphones.png'); */
-}
 
 .item {
     position: absolute;
-    width: 8rem;
-    height: 8rem;
+
     /* top: 50%; */
 }
 
+
 .item1 {
-    left: 70%;
-    top: 60%;
+    left: 60%;
+    top: 80%;
+    width: 8rem;
+    height: 8rem;
+    
     transform: rotate(-180deg);
-    animation: throw1 1s cubic-bezier(0, 0, 0.28, 0.94) forwards;
+    animation: floating1 6s ease-in-out infinite;
+    /* animation: throw1 1s cubic-bezier(0, 0, 0.28, 0.94) forwards; */
 }
 
 .item2 {
-    left: 85%;
-    top: 75%;
+
+    left: 55%;
+    top: 57%;
+    width: 9rem;
+    height: 9rem;
     transform: rotate(100deg);
-    animation: throw2 1s cubic-bezier(0, 0, 0.28, 0.94) forwards;
+    animation: floating2 6s ease-in-out infinite;
+    /* animation: throw2 1s cubic-bezier(0, 0, 0.28, 0.94) forwards; */
 }
 
 .item3 {
-    left: 0%;
+    left: 5%;
     top: 73%;
+    width: 12rem;
+    height: 12rem;
     transform: rotate(100deg);
-    animation: throw3 1s cubic-bezier(0, 0, 0.28, 0.94) forwards;
+    animation: floating3 6s ease-in-out infinite;
+    /* animation: throw3 1s cubic-bezier(0, 0, 0.28, 0.94) forwards; */
 }
 
 .item4 {
-    left: 23%;
-    top: 62%;
+    left: 15%;
+    top: 60%;
+    width: 9rem;
+    height: 9rem;
     transform: rotate(-50deg);
-    animation: throw4 1s cubic-bezier(0, 0, 0.28, 0.94) forwards;
+    animation: floating4 6s ease-in-out infinite;
+    /* animation: throw4 1s cubic-bezier(0, 0, 0.28, 0.94) forwards; */
 }
 
 .item5 {
     left: 44%;
     top: 81%;
     transform: rotate(15deg);
-    animation: throw5 1s cubic-bezier(0, 0, 0.28, 0.94) forwards;
+    /* animation: throw5 1s cubic-bezier(0, 0, 0.28, 0.94) forwards; */
 }
 
 @keyframes floating1 {
@@ -197,15 +203,6 @@
         display: flex;
     }
 
-    .cover-objects {
-        width: 100%;
-        height: 15rem;
-        background-color: #1c1c1c;
-        position: relative;
-        align-self: flex-end;
-        /* background-image: url('../../media/images/headphones.png'); */
-    }
-
     .item {
         position: absolute;
         top: 83%;
@@ -213,45 +210,45 @@
 
     .item1 {
         left: 0%;
-        top: 25%;
-        width: 23rem;
-        height: 23rem;
+        top: 22%;
+        width: 17rem;
+        height: 17rem;
         transform: rotate(-180deg);
-        animation: throw1 2s cubic-bezier(0, 0, 0.28, 0.94) forwards;
+        /* animation: throw1 2s cubic-bezier(0, 0, 0.28, 0.94) forwards; */
     }
 
     .item2 {
         left: 17%;
-        top: 10%;
-        width: 33rem;
-        height: 33rem;
+        top: 4%;
+        width: 25rem;
+        height: 25rem;
         transform: rotate(100deg);
-        animation: throw2 2s cubic-bezier(0, 0, 0.28, 0.94) forwards;
+        /* animation: throw2 2s cubic-bezier(0, 0, 0.28, 0.94) forwards; */
     }
 
     .item3 {
         left: 12%;
-        top: 41%;
-        width: 33rem;
-        height: 33rem;
+        top: 45%;
+        width: 27rem;
+        height: 27rem;
         transform: rotate(100deg);
-        animation: throw3 2s cubic-bezier(0, 0, 0.28, 0.94) forwards;
+        /* animation: throw3 2s cubic-bezier(0, 0, 0.28, 0.94) forwards; */
     }
 
     .item4 {
-        left: 33%;
-        top: 42%;
-        width: 23rem;
-        height: 23rem;
+        left: 35%;
+        top: 35%;
+        width: 22rem;
+        height: 22rem;
         transform: rotate(-50deg);
-        animation: throw4 2s cubic-bezier(0, 0, 0.28, 0.94) forwards;
+        /* animation: throw4 2s cubic-bezier(0, 0, 0.28, 0.94) forwards; */
     }
 
     .item5 {
         left: 44%;
         top: 19%;
         transform: rotate(15deg);
-        animation: throw5 2s cubic-bezier(0, 0, 0.28, 0.94) forwards;
+        /* animation: throw5 2s cubic-bezier(0, 0, 0.28, 0.94) forwards; */
     }
 
     @keyframes floating1 {

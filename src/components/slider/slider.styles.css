@@ -1,5 +1,11 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
+.image-gallery {
+    margin: 0;
+    width: 100%;
+    /* margin: 0 5rem 0 0; */
+}
+
 @media only screen and (min-width: 768px) {
     .image-gallery {
         margin: 0;

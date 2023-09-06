@@ -21,18 +21,19 @@
 }
 
 .form-container {
-    width: 100vw;
-    height: 80vh;
+    width: 100%;
+    height: fit-content;
     position: absolute;
-    top: 50%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: flex-start;
-
+    flex-direction: column;
+    align-content: center
 }
 
 .inputs-container {
@@ -52,6 +53,24 @@
     font-size: 4rem;
     font-family: assistant;
 }
+
+.radio-btn {
+    font-size: 1.2rem !important;
+    font-family: assistant;
+    text-align: right !important;
+}
+
+.radio-container {
+    display: flex;
+    align-items: flex-start !important;
+    width: 100% !important;
+    padding-right: 2rem;
+}
+
+:where(.css-dev-only-do-not-override-nnuwmp).ant-radio-group {
+     display: block;
+}
+
 @media only screen and (min-width: 768px) {
     #submitBtn {
         font-size: 2rem;
@@ -64,6 +83,10 @@
     
     .form-input {
         font-size: 1.5rem;
+    }
+
+    .radio-btn {
+        font-size: 1.5rem !important;
     }
 
 }

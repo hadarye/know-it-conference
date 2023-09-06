@@ -43,12 +43,6 @@ const FrontAnimation = () => {
         {ITEMS.map((element, index) => (
             <img src={element.link} key={index} ref={element.ref} onAnimationEnd={() => {element.ref.current.style.animation += `floating${index + 1} 6s ease-in-out infinite`;}} className={`item${index + 1} item`}/>
         ))}
-        {/* <div className='item1 item'></div>
-        <div className='item2 item'></div>
-        <div className='item3 item'></div>
-        <div className='item4 item'></div>
-        <div className='item5 item'></div> */}
-        <div className='cover-objects'></div>
       </div>
     );
 }

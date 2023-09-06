@@ -5,7 +5,7 @@ const ParticipantCard = (props) => {
     return (
         <div className='participant-card-container'>
             <div className='participant-card'>
-                <img src={close} onClick={() => props.closeReadMore()} className='card-cose-btn'></img>
+                <div style={{backgroundImage: `url(${close})`}} onClick={() => props.closeReadMore()} className='card-cose-btn'></div>
                 <img src={props.infoObj.img} className='main-img participant-card-img'></img>
                 <h1 className='participant-card-topic'>{props.infoObj.topic}</h1>
                 <h3 className='participant-card-name'>{props.infoObj.name}</h3>

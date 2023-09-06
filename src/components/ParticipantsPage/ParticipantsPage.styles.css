@@ -161,7 +161,7 @@
 
 .secondary-card-container {
     display: flex;
-    width: 100%;
+    width: 97%;
     overflow-x: none;
     height: 40rem;
     overflow-y: auto;
@@ -328,7 +328,7 @@
         background-size: cover;
         flex-shrink: 0;
         margin: 2rem 2rem 2rem 0;
-        box-shadow: -5em 0 0 0 #defb82;
+        box-shadow: -2.5em 0 0 0 #defb82;
     }
 
 

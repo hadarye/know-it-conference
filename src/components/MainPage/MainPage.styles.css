@@ -81,7 +81,7 @@
 .header {
     font-size: 2rem;
     font-weight: 400;
-    margin: 1rem 0;
+    margin: 0;
     text-align: right;
     width: 60vw;
 }
@@ -89,7 +89,7 @@
 .main-page-text {
     font-size: 1.2rem;
     text-align: right;
-    margin: 0;
+    margin: 0 0 2rem 0;
 }
 
 .text-section {
@@ -98,7 +98,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 16rem;
+    height: fit-content;
     flex-wrap: nowrap;
 }
 
@@ -106,7 +106,7 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-content: center;
+    height: fit-content;
     align-items: center;
 }
 
@@ -123,7 +123,8 @@
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 1rem 0 0 0;
+    margin: 4rem 0 0 0;
+    height: max-content;
 }
 
 .text-pic-section1 {
@@ -274,7 +275,7 @@
     }
 
     .main-page-text {
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-align: right;
         margin: 1rem 0;
     }
@@ -310,7 +311,7 @@
         align-content: center;
         align-items: center;
         flex-wrap: wrap;
-        margin: 6rem 0 0 0;
+        margin: 6rem 2rem 0 0;
     }
 
     .text-pic-section1 {

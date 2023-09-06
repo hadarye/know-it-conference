@@ -1,6 +1,7 @@
 import './MainPage.styles.css';
 import { motion, useScroll, useAnimation, useInView } from "framer-motion";
 import { useEffect, useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import SquareDetails from '../SquareDetails/SquareDetails.component';
 import CountdownTimer from '../countdown/CountdownTimer.component';
 import Slider from '../slider/slider.component';
@@ -8,6 +9,7 @@ import ParticipantsPreview from '../ParticipantsPreview/ParticipantsPreview.comp
 import FrontAnimation from '../FrontAnimation/FrontAnimation.component';
 
 const MainPage = (props) => {
+    const navigate = useNavigate();
     const control = useAnimation();
     const motionRef1 = useRef(null);
     const motionRef2 = useRef(null);
@@ -34,7 +36,7 @@ const MainPage = (props) => {
 
                     <h1 className='main-header'>למידה מעולם לא הייתה חדשנית יותר.</h1>
                     <p className='small-text'>כנס חדשנות בלמידה 2023</p>
-                    <button className='sign-btn pointer'>להרשמה</button>
+                    <button className='sign-btn pointer' onClick={() => navigate("/registration")}>להרשמה</button>
                 </div>
                 <div className='black-section1' ref={motionRefBlack}>
                     <FrontAnimation></FrontAnimation>
@@ -51,7 +53,7 @@ const MainPage = (props) => {
                     <div className='text-pic-section text-pic-section1'>
 
                         <div className='text-section text-section1'>
-                            <motion.div ref={motionRef1} style={{ transform: isInView1 ? "none" : "translateX(300px)", opacity: isInView1 ? 1 : 0, transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)" }}>
+                            <motion.div className='text-section' ref={motionRef1} style={{ transform: isInView1 ? "none" : "translateX(300px)", opacity: isInView1 ? 1 : 0, transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)" }}>
                                 <h1 className='header'>KNOW IT?</h1>
                                 <p className="main-page-text">{DATA[0]}</p>
                             </motion.div>
