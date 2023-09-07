@@ -16,16 +16,16 @@ import image14 from '../../media/images/logos/image14.png';
 import image15 from '../../media/images/logos/image15.png';
 import image16 from '../../media/images/logos/image16.png';
 import image17 from '../../media/images/logos/image17.png';
-import image18 from '../../media/images/logos/image1.png';
-import image19 from '../../media/images/logos/image18.png';
-import image20 from '../../media/images/logos/image19.png';
-import image21 from '../../media/images/logos/image20.png';
-import image22 from '../../media/images/logos/image21.png';
-import image23 from '../../media/images/logos/image22.png';
-import image24 from '../../media/images/logos/image23.png';
-import image25 from '../../media/images/logos/image24.png';
-import image26 from '../../media/images/logos/image25.png';
-import image27 from '../../media/images/logos/image26.png';
+import image18 from '../../media/images/logos/image18.png';
+import image19 from '../../media/images/logos/image19.png';
+import image20 from '../../media/images/logos/image20.png';
+import image21 from '../../media/images/logos/image21.png';
+import image22 from '../../media/images/logos/image22.png';
+import image23 from '../../media/images/logos/image23.png';
+import image24 from '../../media/images/logos/image24.png';
+import image25 from '../../media/images/logos/image25.png';
+import image26 from '../../media/images/logos/image26.png';
+import image27 from '../../media/images/logos/image27.jpg';
 
 
 const Exhibition = () => {
@@ -35,7 +35,7 @@ const Exhibition = () => {
     return(
         <>
             {LOGOS.map((image) => (
-            <img className='exhibition-logo' src={image}/>
+            <img className='exhibition-logo' key={image} src={image}/>
         ))}
         </>
     )
