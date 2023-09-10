@@ -104,7 +104,7 @@ const Registration = () => {
                             <Space className='radio-container' direction="vertical">
                                 <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
                                 <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
-                                <Radio className='radio-btn' value="מיה ליבנה | מידה שמייצרת כוכבים בעיניים">מיה ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
+                                <Radio className='radio-btn' value="עדי ליבנה | מידה שמייצרת כוכבים בעיניים">עדי ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
                                 <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio>
                                 <Radio className='radio-btn' value="יניב קרמר | משאבי אנוש בעולם החדש">יניב קרמר | משאבי אנוש בעולם החדש</Radio>
                                 <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
@@ -134,7 +134,7 @@ const Registration = () => {
                             <Space className='radio-container' direction="vertical">
                             <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
                                 <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
-                                <Radio className='radio-btn' value="מיה ליבנה | מידה שמייצרת כוכבים בעיניים">מיה ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
+                                <Radio className='radio-btn' value="עדי ליבנה | מידה שמייצרת כוכבים בעיניים">עדי ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
                                 <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio>
                                 <Radio className='radio-btn' value="יניב קרמר | משאבי אנוש בעולם החדש">יניב קרמר | משאבי אנוש בעולם החדש</Radio>
                                 <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>

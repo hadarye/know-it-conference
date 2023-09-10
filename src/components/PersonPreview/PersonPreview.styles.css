@@ -1,0 +1,38 @@
+.person {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 6px solid white;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.person:hover > .preview-description {
+    height: 50%;
+}
+
+.preview-description {
+    height: 0%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.862);
+    border-radius: 0 0 100% 100%;
+    transition: 1s;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .person {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        border: 6px solid white;
+        flex-shrink: 0;
+    }
+}

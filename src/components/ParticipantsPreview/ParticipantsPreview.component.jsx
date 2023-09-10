@@ -1,5 +1,6 @@
 import './ParticipantsPreview.styles.css'
 import { useNavigate } from 'react-router-dom';
+import PersonPreview from '../PersonPreview/PersonPreview.component';
 import arrow from '../../media/images/arrow.png';
 import eliran from '../../media/images/people/eliran.png';
 import yael from '../../media/images/people/yael.jpg'
@@ -73,11 +74,11 @@ const ParticipantsPreview = () => {
             <div className='people-container'>
 
                 {PEOPLE.map((element, index) => (
-                    <div className='person' key={index} style={{ backgroundImage: `url(${element.src})` }}></div>
+                    <PersonPreview key={index} bg={element.src}></PersonPreview>
                 ))}
             </div>
-            <div className='see-more'>
-                    <p className='white-text see-text' onClick={() => {navigate("/lectures"); }}>צפו בעוד</p>
+            <div className='see-more' onClick={() => {navigate("/lectures");  window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}}>
+                    <p className='white-text see-text'>צפו בעוד</p>
                     <img className='arrow' src={arrow}></img>
             </div>
         </>

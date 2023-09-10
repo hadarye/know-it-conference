@@ -64,8 +64,6 @@ const MainPage = (props) => {
 
                     <div className='text-pic-section text-pic-section2'>
                         <div className='logos'>
-                            <div className='round-logo' style={{backgroundImage: `url(${hadracha})`}}></div>
-                            <div className='logo-till'></div>
                             <div className='round-logo' style={{backgroundImage: `url(${kirya})`}}></div>
                         </div>
                         

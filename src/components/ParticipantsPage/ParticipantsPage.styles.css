@@ -73,11 +73,13 @@
 .main-topic {
     font-size: 2rem;
     margin: 1rem 0 0 0;
+    font-weight: 600;
 }
 
 .main-name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0.5rem 0;
+    font-weight: 600;
 }
 
 .main-text {
@@ -90,11 +92,13 @@
 .secondary-topic {
     font-size: 1.7rem;
     margin: 0 0 0.5rem 0;
+    font-weight: 600;
 }
 
 .secondary-name {
     font-size: 1.2rem;
     margin: 0 0 0.5rem 0;
+    font-weight: 600;
 }
 
 .secondary-text {
