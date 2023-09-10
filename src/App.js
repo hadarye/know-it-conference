@@ -33,11 +33,11 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/knowit-2023/" element={<><NavBar isOpen={isMenu} isDate={isDate} handleMenu={handleMenu}/><Menu isOpen={isMenu} handleMenu={handleMenu}/></>}>
+        <Route path="/" element={<><NavBar isOpen={isMenu} isDate={isDate} handleMenu={handleMenu}/><Menu isOpen={isMenu} handleMenu={handleMenu}/></>}>
           <Route path="*" element={<MainPage handleDate={handleDate} targetDate={dateTimeAfterNumDays}/>}></Route>
-          <Route path="contact" element={<ContactInfo/>}></Route>
-          <Route path="lectures" element={<ParticipantsPage/>}></Route>
-          <Route path="registration" element={<Registration/>}></Route>
+          <Route path="knowit-2023/contact" element={<ContactInfo/>}></Route>
+          <Route path="knowit-2023/lectures" element={<ParticipantsPage/>}></Route>
+          <Route path="knowit-2023/registration" element={<Registration/>}></Route>
         </Route>
       </Routes>
     </div>
