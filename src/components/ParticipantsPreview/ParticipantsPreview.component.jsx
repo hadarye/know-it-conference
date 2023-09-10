@@ -77,7 +77,7 @@ const ParticipantsPreview = () => {
                 ))}
             </div>
             <div className='see-more'>
-                    <p className='white-text see-text' onClick={() => {navigate("knowit-2023/lectures"); }}>צפו בעוד</p>
+                    <p className='white-text see-text' onClick={() => {navigate("/lectures"); }}>צפו בעוד</p>
                     <img className='arrow' src={arrow}></img>
             </div>
         </>

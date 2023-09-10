@@ -38,7 +38,7 @@ const MainPage = (props) => {
 
                     <h1 className='main-header'>למידה מעולם לא הייתה חדשנית יותר.</h1>
                     <p className='small-text'>הכנס הצה״לי לחדשנות בלמידה 2023</p>
-                    <button className='sign-btn pointer' onClick={() => navigate("knowit-2023/registration")}>להרשמה</button>
+                    <button className='sign-btn pointer' onClick={() => navigate("/registration")}>להרשמה</button>
                 </div>
                 <div className='black-section1' ref={motionRefBlack}>
                     <FrontAnimation></FrontAnimation>

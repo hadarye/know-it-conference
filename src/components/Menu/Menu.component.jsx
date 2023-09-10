@@ -30,19 +30,19 @@ const Menu = (props) => {
   return (
     <div className='menu-container' ref={menuRef} >
       <div className="menu">
-        <div className='menu-item' onClick={() => {handleClose(); navigate("knowit-2023/home"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
+        <div className='menu-item' onClick={() => {handleClose(); navigate("/home"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
           <img className='menu-item-icon' src={home} />
           <div className='menu-item-header'>ראשי</div>
         </div>
-        <div className='menu-item' onClick={() => {handleClose(); navigate("knowit-2023/lectures"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
+        <div className='menu-item' onClick={() => {handleClose(); navigate("/lectures"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
           <img className='menu-item-icon' src={man} />
           <div className='menu-item-header'>רשימת המרצים</div>
         </div>
-        <div className='menu-item'  onClick={() => {handleClose(); navigate("knowit-2023/registration"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
+        <div className='menu-item'  onClick={() => {handleClose(); navigate("/registration"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
           <img className='menu-item-icon' src={form} />
           <div className='menu-item-header'>הרשמה - חינם!</div>
         </div>
-        <div className='menu-item' onClick={() => {handleClose(); navigate("knowit-2023/contact"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
+        <div className='menu-item' onClick={() => {handleClose(); navigate("/contact"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
           <img className='menu-item-icon' src={contact} />
           <div className='menu-item-header'>צור קשר</div>
         </div>
