@@ -46,7 +46,7 @@ const NavBar = (props) => {
           <span></span>
         </div>
         {/* <img src={menu} className='menu-icon pointer' onClick={() => props.handleMenu()}/> */}
-        <img src={LOGO} onClick={() => navigate("/home")} className='know-it-logo pointer'/>
+        <img src={LOGO} onClick={() => navigate("knowit-2023/home")} className='know-it-logo pointer'/>
       </div>
       <Outlet></Outlet>
 
