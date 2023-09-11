@@ -13,7 +13,7 @@ import daniel from '../../media/images/people/daniel_hackathon.jpg';
 import snir from '../../media/images/people/snir.jpg';
 import adi from '../../media/images/people/mia.png';
 import yaniv from '../../media/images/people/yaniv.jpg';
-import yonatan from '../../media/images/people/yonatan.jpeg';
+import aviv from '../../media/images/people/aviv.jpg';
 import dana from '../../media/images/people/dana.png';
 import nir from '../../media/images/people/nir.jpg';
 import orit from '../../media/images/people/orit.jpg';
@@ -145,6 +145,13 @@ const ParticipantsPage = () => {
         "topic": "שותפי למידה",
         "description": "מערך הלמידה והפיתוח הארגוני אמון על ההתפתחות האישית, הניהולית והמקצועית, והמחוברות של עובדי מכבי.",
         "full-text": "מערך הלמידה והפיתוח הארגוני אמון על ההתפתחות האישית, הניהולית והמקצועית, והמחוברות של עובדי מכבי. אחד האמצעים המרכזיים להשגת המטרות הוא בנייה ופיתוח של קהילת שותפי למידה והפיכתם לכוח מקצועי, מכפיל כח של המערך. עובדים בתפקידים שונים: מובילי למידה, מדריכים פנימיים, מנטורים, מייקרים ויועצי קריירה המהווים זרוע נוספת שלנו ליצירת למידה עדכנית, רלבנטית וחדשנית."
+    },
+    {
+        "img": aviv,
+        "name": 'אביב ואנונו',
+        "topic": "כשהופכים בינה למלאכותית החרדה היא טבעית.",
+        "description": "בהרצאה נחשף לאיום של הבינה המלאכותית על עולמות הלמידה.",
+        "full-text": " בהרצאה נחשף לאיום של הבינה המלאכותית על עולמות הלמידה ועם הרבה הומור, סטוריטלינג ושיתוף שלכם נחשף לשיטות ודרכי הוראה מותאמת שיצבעו את הבינה הלאכותית כהזדמנות ומנוע ללמידה אפקטיבים."
     }]
 
 

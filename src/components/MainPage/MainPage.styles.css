@@ -144,18 +144,16 @@
     margin: 0 1rem;
 }
 
-.black-section2 {
-    margin: 4rem 0;
-    background-color: #1C1C1C;
-    width: 100%;
-    height: 20rem;
-}
 
 .black-section2 {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
+    margin: 4rem 0;
+    background-color: #1C1C1C;
+    width: 100%;
+    height: 20rem;
 }
 
 

@@ -11,6 +11,7 @@ import snir from '../../media/images/people/snir.jpg';
 import adi from '../../media/images/people/mia.png';
 import yaniv from '../../media/images/people/yaniv.jpg';
 import yonatan from '../../media/images/people/yonatan.jpeg';
+import aviv from '../../media/images/people/aviv.jpg';
 import dana from '../../media/images/people/dana.png';
 import nir from '../../media/images/people/nir.jpg';
 import orit from '../../media/images/people/orit.jpg';
@@ -95,12 +96,17 @@ const ParticipantsPreview = () => {
             "src": leaKeren,
             "name": 'ליאה אפגין  + קארן קמנצקי',
             "topic": "שותפי למידה",
+        },
+        {
+            "src": aviv,
+            "name": "אביב ואנונו",
+            "topic": "כשהופכים בינה למלאכותית החרדה היא טבעית.",
         }
         
     ]
     return (
         <>
-            <h1 className='white-text header header-people'>המרצים שלנו:</h1>
+            <h1 className='white-text header header-people'>המרצים והמרצות שלנו:</h1>
             <div className='people-container'>
                 {PEOPLE.map((element, index) => (
                     <PersonPreview topic={element.topic} name={element.name} key={index} bg={element.src}></PersonPreview>
