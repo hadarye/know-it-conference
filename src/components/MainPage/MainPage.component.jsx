@@ -9,7 +9,6 @@ import ParticipantsPreview from '../ParticipantsPreview/ParticipantsPreview.comp
 import FrontAnimation from '../FrontAnimation/FrontAnimation.component';
 import Luz from '../../components/Luz/Luz.component'
 import ContactInfo from '../ContactInfo/ContactInfo.component';
-import hadracha from '../../media/images/הדרכה.png';
 import kirya from '../../media/images/kirya.png';
 
 const MainPage = (props) => {
