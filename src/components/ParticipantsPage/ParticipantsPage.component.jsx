@@ -1,5 +1,6 @@
 import './ParticipantsPage.styles.css';
 import { useState, useRef } from 'react';
+import ContactInfo from '../ContactInfo/ContactInfo.component';
 import Exhibition from '../exhibition/Exhibition.component';
 import main1 from '../../media/images/people/shirlee.jpg';
 import main2 from '../../media/images/people/Elad_Darmon.jpeg';
@@ -201,9 +202,7 @@ const ParticipantsPage = () => {
                 </div> */}
 
             </div>
-            <div>
-
-            </div>
+            <ContactInfo></ContactInfo>
         </div>
     );
 }

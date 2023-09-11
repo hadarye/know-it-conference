@@ -42,10 +42,6 @@ const Menu = (props) => {
           <img className='menu-item-icon' src={form} />
           <div className='menu-item-header'>הרשמה - חינם!</div>
         </div>
-        <div className='menu-item' onClick={() => {handleClose(); navigate("/contact"); window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
-          <img className='menu-item-icon' src={contact} />
-          <div className='menu-item-header'>צור קשר</div>
-        </div>
       </div>
     </div>
 

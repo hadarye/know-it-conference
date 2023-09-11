@@ -1,11 +1,13 @@
 
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import './Registration.styles.css';
+import Confirmation from '../Confirmation/Confirmation.component';
 import { Button, Form, Input, Radio, Space, notification } from 'antd';
 
 const Registration = () => {
     const [form] = Form.useForm();
     const [api, contextHolder] = notification.useNotification();
+    const [isConfirmed, setIsConfirmed] = useState(false);
 
     const onFinish = useCallback(
         async ({ email, name, id, level, phone, seat1, seat2, unit, role, type, bus }) => {
@@ -33,10 +35,10 @@ const Registration = () => {
                 );
                 api.success({
                     message: 'Submitted successfully',
-                    
+
                 });
                 form.resetFields();
-                alert("פרטיך נרשמו במערכת!");
+                setIsConfirmed(true);
             } catch (e) {
                 api.error({
                     message: e.message,
@@ -47,166 +49,170 @@ const Registration = () => {
     );
 
     return (
-        <div className='form-container'>
-            <h1 className='participants-title' style={{ textAlign: `center`, margin: `10rem 0 0 0` }}>הרשמה לכנס</h1>
-            <p className='registration-text'>ההרשמה מיועדת לאנשים העוסקים בפיתוח הדרכה בצבא, בתעשייה, באקדמיה ולמנהלי
-                הדרכה.</p>
-            <Form
-                form={form}
-                onFinish={onFinish}
-                layout="vertical"
-            >
-                <div className='inputs-container'>
-                    <Form.Item
-                        className='form-item'
-                        name="email"
-                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>אימייל:</label>}
-                        rules={[{ required: true, message: 'אנא הכניסו את המייל שלכם.' }]}
-                    >
-                        <Input className='form-input' />
-                    </Form.Item>
-                    <Form.Item
-                        className='form-item'
-                        name="name"
-                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>שם:</label>}
-                        rules={[{ required: true, message: 'אנא הכניסו את שמכם.' }]}
-                    >
-                        <Input className='form-input' />
-                    </Form.Item>
-                    <Form.Item
-                        className='form-item'
-                        name="id"
-                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>ת.ז. / מספר אישי (לצורך כניסה לבסיס):</label>}
-                        rules={[{ required: true, message: 'אנא הכניסו את תעודת הזהות או המספר האישי שלכם.' }]}
-                    >
-                        <Input className='form-input' />
-                    </Form.Item>
-                    <Form.Item
-                        className='form-item'
-                        name="level"
-                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>דרגה (לאנשי צבא בלבד):</label>}
-                        rules={[{ required: false }]}
-                    >
-                        <Input className='form-input' />
-                    </Form.Item>
-                    <Form.Item
-                        className='form-item'
-                        name="phone"
-                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>טלפון:</label>}
-                        rules={[{ required: true, message: 'אנא הכניסו את מספר הטלפון שלכם.' }]}
-                    >
-                        <Input className='form-input' />
-                    </Form.Item>
-                    <Form.Item
-                        className='form-item'
-                        name="seat1"
-                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>מושב ראשון:</label>}
-                        rules={[{ required: true, message: 'אנא בחרו מושב ראשון.' }]}
-                    >
-                        <Radio.Group>
-                            <Space className='radio-container' direction="vertical">
-                                <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
-                                <Radio className='radio-btn' value="עדי ליבנה | מידה שמייצרת כוכבים בעיניים">עדי ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
-                                <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
-                                <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
-                                <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
-                                {/* <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio> */}
-                                <Radio className='radio-btn' value="יניב קרמר | משאבי אנוש בעולם החדש">יניב קרמר | משאבי אנוש בעולם החדש</Radio>
-                                <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
-                                {/* <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio> */}
-                                <Radio className='radio-btn' value="דנה הורוביץ | פורמולת S4">דנה הורוביץ | פורמולת S4</Radio>
-                                <Radio className='radio-btn' value="ניר כהן | מגמגום לדיבור">ניר כהן | מגמגום לדיבור</Radio>
-                                <Radio className='radio-btn' value="נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?">נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?</Radio>
-                                <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
-                                {/* <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio> */}
-                                <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
-                                {/* <Radio value=""></Radio> */}
+        <>
+            {isConfirmed ? <Confirmation></Confirmation> : null}
+            <div className='form-container'>
 
-                            </Space>
-                        </Radio.Group>
-                    </Form.Item>
-                </div>
-                <div className='inputs-container'>
-                    <Form.Item
-                        className='form-item'
-                        name="seat2"
-                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>מושב שני:</label>}
-                        rules={[{ required: true, message: 'אנא בחרו מושב שני.' }]}
-                    >
-                        <Radio.Group>
-                            <Space className='radio-container' direction="vertical">
-                            <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
-                                <Radio className='radio-btn' value="עדי ליבנה | מידה שמייצרת כוכבים בעיניים">עדי ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
-                                <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
-                                <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
-                                <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
-                                {/* <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio> */}
-                                <Radio className='radio-btn' value="יניב קרמר | משאבי אנוש בעולם החדש">יניב קרמר | משאבי אנוש בעולם החדש</Radio>
-                                <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
-                                {/* <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio> */}
-                                <Radio className='radio-btn' value="דנה הורוביץ | פורמולת S4">דנה הורוביץ | פורמולת S4</Radio>
-                                <Radio className='radio-btn' value="ניר כהן | מגמגום לדיבור">ניר כהן | מגמגום לדיבור</Radio>
-                                <Radio className='radio-btn' value="נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?">נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?</Radio>
-                                <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
-                                {/* <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio> */}
-                                <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
-                            </Space>
-                        </Radio.Group>
-                    </Form.Item>
-                    <Form.Item
-                        className='form-item'
-                        name="unit"
-                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>יחידה / ארגון:</label>}
-                        rules={[{ required: true, message: 'אנא הכניסו את שם הארגון / היחידה שלכם.' }]}
-                    >
-                        <Input className='form-input' />
-                    </Form.Item>
-                    <Form.Item
-                        className='form-item'
-                        name="role"
-                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>תפקיד בארגון:</label>}
-                        rules={[{ required: true, message: 'אנא הכניסו את תפקידכם בארגון.' }]}
-                    >
-                        <Input className='form-input' />
-                    </Form.Item>
-                    <Form.Item
-                        className='form-item'
-                        name="type"
-                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>סוג ארגון:</label>}
-                        rules={[{ required: true, message: 'אנא בחרו בסוג הארגון שלכם.' }]}
-                    >
-                        <Radio.Group>
-                            <Space className='radio-container' direction="vertical">
-                                <Radio className='radio-btn' value="כוחות הבטחון">כוחות הבטחון</Radio>
-                                <Radio className='radio-btn' value="תעשייה">תעשייה</Radio>
-                                <Radio className='radio-btn' value="צה״ל">צה״ל</Radio>
-                                <Radio className='radio-btn' value="ממשלתי">ממשלתי</Radio>
-                                <Radio className='radio-btn' value="מוסדות+חינוך">מוסדות חינוך</Radio>
-                                <Radio className='radio-btn' value="מוסדות+אקדמיה">מוסדות אקדמיה</Radio>
-                                <Radio className='radio-btn' value="אחר">אחר</Radio>
-                            </Space>
-                        </Radio.Group>
-                    </Form.Item>
-                    <Form.Item
-                        className='form-item'
-                        name="bus"
-                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>האם תרצו להירשם להסעה?ֿ | ההסעה תצא מחניון ״חנה וסע״ בתל אביב | פתיחת ההסעה תלויה בכמות הנרשמים.</label>}
-                        rules={[{ required: true, message: 'האם תרצו להירשם להסעה?ֿ' }]}
-                    >
-                        <Radio.Group>
-                            <Space className='radio-container' direction="vertical">
-                                <Radio className='radio-btn' value="כן">כן</Radio>
-                                <Radio className='radio-btn' value="לא">לא</Radio>
-                                <Radio className='radio-btn' value="עוד לא יודע">עוד לא יודע</Radio>
-                            </Space>
-                        </Radio.Group>
-                    </Form.Item>
-                    <Button type="primary" htmlType="submit" className='pointer' id='submitBtn'>
-                        שליחה
-                    </Button>
-                </div>
-            </Form>
-        </div>
+                <h1 className='participants-title' style={{ textAlign: `center`, margin: `10rem 0 0 0` }}>הרשמה לכנס</h1>
+                <p className='registration-text'>ההרשמה מיועדת לאנשים העוסקים בפיתוח הדרכה בצבא, בתעשייה, באקדמיה ולמנהלי
+                    הדרכה.</p>
+                <Form
+                    form={form}
+                    onFinish={onFinish}
+                    layout="vertical"
+                >
+                    <div className='inputs-container'>
+                        <Form.Item
+                            className='form-item'
+                            name="email"
+                            label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>אימייל:</label>}
+                            rules={[{ required: true, message: 'אנא הכניסו את המייל שלכם.' }]}
+                        >
+                            <Input className='form-input' />
+                        </Form.Item>
+                        <Form.Item
+                            className='form-item'
+                            name="name"
+                            label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>שם:</label>}
+                            rules={[{ required: true, message: 'אנא הכניסו את שמכם.' }]}
+                        >
+                            <Input className='form-input' />
+                        </Form.Item>
+                        <Form.Item
+                            className='form-item'
+                            name="id"
+                            label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>ת.ז. / מספר אישי (לצורך כניסה לבסיס):</label>}
+                            rules={[{ required: true, message: 'אנא הכניסו את תעודת הזהות או המספר האישי שלכם.' }]}
+                        >
+                            <Input className='form-input' />
+                        </Form.Item>
+                        <Form.Item
+                            className='form-item'
+                            name="level"
+                            label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>דרגה (לאנשי צבא בלבד):</label>}
+                            rules={[{ required: false }]}
+                        >
+                            <Input className='form-input' />
+                        </Form.Item>
+                        <Form.Item
+                            className='form-item'
+                            name="phone"
+                            label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>טלפון:</label>}
+                            rules={[{ required: true, message: 'אנא הכניסו את מספר הטלפון שלכם.' }]}
+                        >
+                            <Input className='form-input' />
+                        </Form.Item>
+                        <Form.Item
+                            className='form-item'
+                            name="seat1"
+                            label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>מושב ראשון:</label>}
+                            rules={[{ required: true, message: 'אנא בחרו מושב ראשון.' }]}
+                        >
+                            <Radio.Group>
+                                <Space className='radio-container' direction="vertical">
+                                    <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
+                                    <Radio className='radio-btn' value="עדי ליבנה | מידה שמייצרת כוכבים בעיניים">עדי ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
+                                    <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
+                                    <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
+                                    <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
+                                    {/* <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio> */}
+                                    <Radio className='radio-btn' value="יניב קרמר | משאבי אנוש בעולם החדש">יניב קרמר | משאבי אנוש בעולם החדש</Radio>
+                                    <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
+                                    {/* <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio> */}
+                                    <Radio className='radio-btn' value="דנה הורוביץ | פורמולת S4">דנה הורוביץ | פורמולת S4</Radio>
+                                    <Radio className='radio-btn' value="ניר כהן | מגמגום לדיבור">ניר כהן | מגמגום לדיבור</Radio>
+                                    <Radio className='radio-btn' value="נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?">נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?</Radio>
+                                    <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
+                                    {/* <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio> */}
+                                    <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
+                                    {/* <Radio value=""></Radio> */}
+
+                                </Space>
+                            </Radio.Group>
+                        </Form.Item>
+                    </div>
+                    <div className='inputs-container'>
+                        <Form.Item
+                            className='form-item'
+                            name="seat2"
+                            label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>מושב שני:</label>}
+                            rules={[{ required: true, message: 'אנא בחרו מושב שני.' }]}
+                        >
+                            <Radio.Group>
+                                <Space className='radio-container' direction="vertical">
+                                    <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
+                                    <Radio className='radio-btn' value="עדי ליבנה | מידה שמייצרת כוכבים בעיניים">עדי ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
+                                    <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
+                                    <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
+                                    <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
+                                    {/* <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio> */}
+                                    <Radio className='radio-btn' value="יניב קרמר | משאבי אנוש בעולם החדש">יניב קרמר | משאבי אנוש בעולם החדש</Radio>
+                                    <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
+                                    {/* <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio> */}
+                                    <Radio className='radio-btn' value="דנה הורוביץ | פורמולת S4">דנה הורוביץ | פורמולת S4</Radio>
+                                    <Radio className='radio-btn' value="ניר כהן | מגמגום לדיבור">ניר כהן | מגמגום לדיבור</Radio>
+                                    <Radio className='radio-btn' value="נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?">נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?</Radio>
+                                    <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
+                                    {/* <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio> */}
+                                    <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
+                                </Space>
+                            </Radio.Group>
+                        </Form.Item>
+                        <Form.Item
+                            className='form-item'
+                            name="unit"
+                            label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>יחידה / ארגון:</label>}
+                            rules={[{ required: true, message: 'אנא הכניסו את שם הארגון / היחידה שלכם.' }]}
+                        >
+                            <Input className='form-input' />
+                        </Form.Item>
+                        <Form.Item
+                            className='form-item'
+                            name="role"
+                            label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>תפקיד בארגון:</label>}
+                            rules={[{ required: true, message: 'אנא הכניסו את תפקידכם בארגון.' }]}
+                        >
+                            <Input className='form-input' />
+                        </Form.Item>
+                        <Form.Item
+                            className='form-item'
+                            name="type"
+                            label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>סוג ארגון:</label>}
+                            rules={[{ required: true, message: 'אנא בחרו בסוג הארגון שלכם.' }]}
+                        >
+                            <Radio.Group>
+                                <Space className='radio-container' direction="vertical">
+                                    <Radio className='radio-btn' value="כוחות הבטחון">כוחות הבטחון</Radio>
+                                    <Radio className='radio-btn' value="תעשייה">תעשייה</Radio>
+                                    <Radio className='radio-btn' value="צה״ל">צה״ל</Radio>
+                                    <Radio className='radio-btn' value="ממשלתי">ממשלתי</Radio>
+                                    <Radio className='radio-btn' value="מוסדות+חינוך">מוסדות חינוך</Radio>
+                                    <Radio className='radio-btn' value="מוסדות+אקדמיה">מוסדות אקדמיה</Radio>
+                                    <Radio className='radio-btn' value="אחר">אחר</Radio>
+                                </Space>
+                            </Radio.Group>
+                        </Form.Item>
+                        <Form.Item
+                            className='form-item'
+                            name="bus"
+                            label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>האם תרצו להירשם להסעה?ֿ | ההסעה תצא מחניון ״חנה וסע״ בתל אביב | פתיחת ההסעה תלויה בכמות הנרשמים.</label>}
+                            rules={[{ required: true, message: 'האם תרצו להירשם להסעה?ֿ' }]}
+                        >
+                            <Radio.Group>
+                                <Space className='radio-container' direction="vertical">
+                                    <Radio className='radio-btn' value="כן">כן</Radio>
+                                    <Radio className='radio-btn' value="לא">לא</Radio>
+                                    <Radio className='radio-btn' value="עוד לא יודע">עוד לא יודע</Radio>
+                                </Space>
+                            </Radio.Group>
+                        </Form.Item>
+                        <Button type="primary" htmlType="submit" className='pointer' id='submitBtn'>
+                            שליחה
+                        </Button>
+                    </div>
+                </Form>
+            </div>
+        </>
     )
 }
 
