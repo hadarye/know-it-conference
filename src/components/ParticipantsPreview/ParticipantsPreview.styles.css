@@ -5,6 +5,7 @@
     justify-content: space-between;
     margin-left: 10%;
     overflow-x: auto;
+    overflow-y: hidden;
     height: -moz-fit-content;
     height: fit-content;
     flex-wrap: nowrap;

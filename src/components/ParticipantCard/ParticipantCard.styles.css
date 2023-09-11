@@ -10,6 +10,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: relative;
     border: 1px solid black;
+    justify-content: center;
 }
 
 .participant-card-topic {
@@ -26,12 +27,13 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 5rem;
     z-index: 10;
 }
 
 .participant-card-img {
     border: solid 5px #cefb82;
+    width: 12rem;
+    height: 12rem;
 }
 
 .participant-card-text {

@@ -8,7 +8,7 @@ import erik from '../../media/images/people/erik.jpg';
 import gila from '../../media/images/people/gila.jpg';
 import daniel from '../../media/images/people/daniel_hackathon.jpg';
 import snir from '../../media/images/people/snir.jpg';
-import mia from '../../media/images/people/mia.png';
+import adi from '../../media/images/people/mia.png';
 import yaniv from '../../media/images/people/yaniv.jpg';
 import yonatan from '../../media/images/people/yonatan.jpeg';
 import dana from '../../media/images/people/dana.png';
@@ -22,49 +22,79 @@ const ParticipantsPreview = () => {
     const navigate = useNavigate();
     const PEOPLE = [
         {
-            "src": eliran,
-        },
-        {
-            "src": yael,
-        },
-        {
-            "src": erik,
-        },
-        {
             "src": gila,
+            "name": "פרופ' גילה קורץ",
+            "topic": "אבולוציה אקדמאית",
         },
         {
-            "src": daniel,
-        },
-        {
-            "src": snir,
-        },
-        {
-            "src": mia,
-        },
-        {
-            "src": yaniv,
-        },
-        {
-            "src": yonatan,
-        },
-        {
-            "src": dana,
-        },
-        {
-            "src": nir,
+            "src": adi,
+            "name": "עדי ליבנה",
+            "topic": "מידה שמייצרת כוכבים בעיניים",
         },
         {
             "src": orit,
+            "name": 'אורית ברוידס',
+            "topic": "חדשנות: איך להישאר רלוונטים בעולם משתנה?",
+        },
+        {
+            "src": eliran,
+            "name": "אלירן שקולניק",
+            "topic": "המהפכה המלאכותית",
+        },
+        {
+            "src": yael,
+            "name": "יעל פלד",
+            "topic": "מעבר לשעמום",
+        },
+        {
+            "src": erik,
+            "name": "אריק אינגבר",
+            "topic": "AI works for me",
+        },
+        {
+            "src": daniel,
+            "name": "דניאל אנדרסון",
+            "topic": "שיטת Agile בתהליכי למידה",
+        },
+        {
+            "src": snir,
+            "name": 'פיינשטיין שניר',
+            "topic": "הטמעת תוצרי הדרכה",
+        },
+        {
+            "src": yaniv,
+            "name": "יניב קרמר",
+            "topic": "משאבי אנוש בעולם החדש",
+        },
+        {
+            "src": yonatan,
+            "name": "יונתן חצור",
+            "topic": "איך לגרום לאחרים להזיז הרים",
+        },
+        {
+            "src": dana,
+            "name": "דנה הורוביץ",
+            "topic": "פורמולת S4",
+        },
+        {
+            "src": nir,
+            "name": 'ניר כהן',
+            "topic": "מגמגום לדיבור",
         },
         {
             "src": nethanel,
+            "name": 'נתנאל רייכר',
+            "topic": "כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?",
         },
         {
             "src": eden,
+            "name": 'עדן ביבס',
+            "topic": "איך להשתמש נכון בצ'אט GPT?",
         },
         {
             "src": leaKeren,
+            "name": 'ליאה אפגין  + קארן קמנצקי',
+            "topic": "שותפי למידה",
         }
         
     ]
@@ -72,9 +102,8 @@ const ParticipantsPreview = () => {
         <>
             <h1 className='white-text header header-people'>המרצים שלנו:</h1>
             <div className='people-container'>
-
                 {PEOPLE.map((element, index) => (
-                    <PersonPreview key={index} bg={element.src}></PersonPreview>
+                    <PersonPreview topic={element.topic} name={element.name} key={index} bg={element.src}></PersonPreview>
                 ))}
             </div>
             <div className='see-more' onClick={() => {navigate("/lectures");  window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}}>

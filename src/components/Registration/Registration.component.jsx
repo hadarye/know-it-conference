@@ -102,18 +102,18 @@ const Registration = () => {
                     >
                         <Radio.Group>
                             <Space className='radio-container' direction="vertical">
+                                <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
+                                <Radio className='radio-btn' value="עדי ליבנה | מידה שמייצרת כוכבים בעיניים">עדי ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
+                                <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
                                 <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
                                 <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
-                                <Radio className='radio-btn' value="עדי ליבנה | מידה שמייצרת כוכבים בעיניים">עדי ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
                                 <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio>
                                 <Radio className='radio-btn' value="יניב קרמר | משאבי אנוש בעולם החדש">יניב קרמר | משאבי אנוש בעולם החדש</Radio>
                                 <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
                                 <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio>
                                 <Radio className='radio-btn' value="דנה הורוביץ | פורמולת S4">דנה הורוביץ | פורמולת S4</Radio>
                                 <Radio className='radio-btn' value="ניר כהן | מגמגום לדיבור">ניר כהן | מגמגום לדיבור</Radio>
-                                <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
                                 <Radio className='radio-btn' value="נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?">נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?</Radio>
-                                <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
                                 <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
                                 <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio>
                                 <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
@@ -132,18 +132,18 @@ const Registration = () => {
                     >
                         <Radio.Group>
                             <Space className='radio-container' direction="vertical">
-                            <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
-                                <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
+                            <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
                                 <Radio className='radio-btn' value="עדי ליבנה | מידה שמייצרת כוכבים בעיניים">עדי ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
+                                <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
+                                <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
+                                <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
                                 <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio>
                                 <Radio className='radio-btn' value="יניב קרמר | משאבי אנוש בעולם החדש">יניב קרמר | משאבי אנוש בעולם החדש</Radio>
                                 <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
                                 <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio>
                                 <Radio className='radio-btn' value="דנה הורוביץ | פורמולת S4">דנה הורוביץ | פורמולת S4</Radio>
                                 <Radio className='radio-btn' value="ניר כהן | מגמגום לדיבור">ניר כהן | מגמגום לדיבור</Radio>
-                                <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
                                 <Radio className='radio-btn' value="נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?">נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?</Radio>
-                                <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
                                 <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
                                 <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio>
                                 <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
