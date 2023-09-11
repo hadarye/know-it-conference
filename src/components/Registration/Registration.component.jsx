@@ -195,15 +195,15 @@ const Registration = () => {
                             </Radio.Group>
                         </Form.Item>
                         <Form.Item     
-                        className='form-item'
+                        className='form-item form-select'
                         name="bahad"
                         label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>אם הינכם משרתים בקריית ההדרכה: בחרו בבה״ד שלכם.</label>}
                         rules={[{ required: false }]}>
                             <Select
                                 initialvalues="בחר"
-                                style={{
-                                    width: 120,
-                                }}
+                                // style={{
+                                //     width: 400,
+                                // }}
                                 options={[{
                                     value: 'בחר',
                                     label: 'בחר',
