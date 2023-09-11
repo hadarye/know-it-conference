@@ -3,7 +3,7 @@
     height: 4rem;
     border: none;
     background-color: transparent;
-    background-size: cover;
+    background-size: contain;
     background-image: url("../../media/images/calendar.svg");
     cursor: pointer;
     margin: 2rem 0;
