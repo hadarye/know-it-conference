@@ -1,6 +1,6 @@
 import 'add-to-calendar-button';
 import { atcb_action } from 'add-to-calendar-button';
-import waze from '../../media/images/waze.png';
+import waze from '../../media/images/waze.svg';
 import "./InfoIcons.styles.css";
 
 const InfoIcons = () => {

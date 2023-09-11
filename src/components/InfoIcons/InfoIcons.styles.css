@@ -4,7 +4,7 @@
     border: none;
     background-color: transparent;
     background-size: cover;
-    background-image: url("../../media/images/calendar.png");
+    background-image: url("../../media/images/calendar.svg");
     cursor: pointer;
     margin: 2rem 0;
 }
@@ -20,13 +20,12 @@
         height: 8rem;
         border: none;
         background-color: transparent;
-        background-size: cover;
-        background-image: url("../../media/images/calendar.png");
+        background-size: contain;
+        background-repeat: no-repeat;
         cursor: pointer;
     }
 
     .waze-icon {
         width: 8rem;
-        cursor: pointer;
     }
 }

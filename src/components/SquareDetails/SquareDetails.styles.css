@@ -7,38 +7,11 @@
     margin: 5rem 0;
     flex-direction: column;
     align-items: center;
+    align-content: center
 }
 
-#bg1,
-#bg3,
-#bg5 {
+#bg6{
     background-color: #1c1c1c;
-    color: white;
-
-}
-
-#bg1 {
-    border-radius: 250px 10px 10px 10px;
-}
-
-#bg2 {
-    border-radius: 250px;
-}
-
-#bg3 {
-    border-radius: 10px 250px 10px 10px;
-}
-
-#bg4 {
-    border-radius: 10px 10px 10px 250px;
-}
-
-#bg5 {
-    border-radius: 250px 250px 10px 10px;
-}
-
-#bg6 {
-    border-radius: 250px 10px 250px 10px;
 }
 
 .square-title {
@@ -48,7 +21,7 @@
 }
 
 .square {
-    width: 100%;
+    width: 90%;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -104,6 +77,7 @@
         background-size: 92% 92%;
         background-repeat: no-repeat;
         background-position: center;
+
     }
 
     .square:hover {
@@ -124,4 +98,5 @@
         align-items: center;
         justify-content: space-evenly;
     }
+
 }

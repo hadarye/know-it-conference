@@ -9,8 +9,6 @@
     align-items: center;
 }
 
-
-
 .section {
     position: relative;
     width: 100%;
@@ -188,10 +186,10 @@
 }
 
 .round-logo {
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     background-size: cover;
-    
+    /* margin: auto; */
 }
 
 .logos {
@@ -220,9 +218,10 @@
     }
 
     .round-logo {
-        width: 6rem;
-        height: 6rem;
+        width: 23rem;
+        height: 23rem;
         background-size: cover;
+        margin: 0 0 0 4rem;
     }
 
     .logos {

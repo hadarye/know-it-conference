@@ -8,9 +8,10 @@ const Registration = () => {
     const [api, contextHolder] = notification.useNotification();
 
     const onFinish = useCallback(
-        async ({ email, name, id, level, phone, seat1, seat2, unit, role, type }) => {
+        async ({ email, name, id, level, phone, seat1, seat2, unit, role, type, bus }) => {
             try {
                 await fetch(
+                    // https://docs.google.com/forms/d/e/1FAIpQLScjYm6gcS-WCMMAO2Pxo7oxa2advDvmHXtBK2e8b1h8mOl-gA/viewform?usp=pp_url&entry.934400202=1&entry.1784291486=2&entry.1115520134=3&entry.860340030=4&entry.590287215=%D7%90%D7%9C%D7%99%D7%A8%D7%9F+%D7%A9%D7%A7%D7%95%D7%9C%D7%A0%D7%99%D7%A7+-+%D7%94%D7%9E%D7%94%D7%A4%D7%9B%D7%94+%D7%94%D7%9E%D7%9C%D7%90%D7%9B%D7%95%D7%AA%D7%99%D7%AA&entry.1127533607=%D7%90%D7%9C%D7%99%D7%A8%D7%9F+%D7%A9%D7%A7%D7%95%D7%9C%D7%A0%D7%99%D7%A7+-+%D7%94%D7%9E%D7%94%D7%A4%D7%9B%D7%94+%D7%94%D7%9E%D7%9C%D7%90%D7%9B%D7%95%D7%AA%D7%99%D7%AA&entry.1560729842=5&entry.1914024005=6&entry.1642695268=%D7%9B%D7%95%D7%97%D7%95%D7%AA+%D7%94%D7%91%D7%98%D7%97%D7%95%D7%9F&entry.1005952753=%D7%9B%D7%9F
                     // https://docs.google.com/forms/d/e/1FAIpQLScjYm6gcS-WCMMAO2Pxo7oxa2advDvmHXtBK2e8b1h8mOl-gA/viewform?usp=pp_url&entry.934400202=name&entry.1784291486=id&entry.1115520134=rank&entry.860340030=phone&entry.590287215=%D7%90%D7%9C%D7%99%D7%A8%D7%9F+%D7%A9%D7%A7%D7%95%D7%9C%D7%A0%D7%99%D7%A7+-+%D7%94%D7%9E%D7%94%D7%A4%D7%9B%D7%94+%D7%94%D7%9E%D7%9C%D7%90%D7%9B%D7%95%D7%AA%D7%99%D7%AA&entry.1127533607=%D7%99%D7%A2%D7%9C+%D7%A4%D7%9C%D7%93+-+%D7%9E%D7%A2%D7%91%D7%A8+%D7%9C%D7%A9%D7%A2%D7%9E%D7%95%D7%9D&entry.1560729842=unit&entry.1914024005=role&entry.1642695268=%D7%9B%D7%95%D7%97%D7%95%D7%AA+%D7%94%D7%91%D7%98%D7%97%D7%95%D7%9F
                     'https://docs.google.com/forms/d/e/1FAIpQLScjYm6gcS-WCMMAO2Pxo7oxa2advDvmHXtBK2e8b1h8mOl-gA/formResponse?' +
                     new URLSearchParams({
@@ -23,6 +24,7 @@ const Registration = () => {
                         'entry.1560729842': unit ?? '',
                         'entry.1914024005': role ?? '',
                         'entry.1642695268': type,
+                        'entry.1005952753': bus,
                         emailAddress: email,
                     }),
                     {
@@ -31,6 +33,7 @@ const Registration = () => {
                 );
                 api.success({
                     message: 'Submitted successfully',
+                    
                 });
                 form.resetFields();
                 alert("פרטיך נרשמו במערכת!");
@@ -107,15 +110,15 @@ const Registration = () => {
                                 <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
                                 <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
                                 <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
-                                <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio>
+                                {/* <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio> */}
                                 <Radio className='radio-btn' value="יניב קרמר | משאבי אנוש בעולם החדש">יניב קרמר | משאבי אנוש בעולם החדש</Radio>
                                 <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
-                                <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio>
+                                {/* <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio> */}
                                 <Radio className='radio-btn' value="דנה הורוביץ | פורמולת S4">דנה הורוביץ | פורמולת S4</Radio>
                                 <Radio className='radio-btn' value="ניר כהן | מגמגום לדיבור">ניר כהן | מגמגום לדיבור</Radio>
                                 <Radio className='radio-btn' value="נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?">נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?</Radio>
                                 <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
-                                <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio>
+                                {/* <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio> */}
                                 <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
                                 {/* <Radio value=""></Radio> */}
 
@@ -137,15 +140,15 @@ const Registration = () => {
                                 <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
                                 <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
                                 <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
-                                <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio>
+                                {/* <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio> */}
                                 <Radio className='radio-btn' value="יניב קרמר | משאבי אנוש בעולם החדש">יניב קרמר | משאבי אנוש בעולם החדש</Radio>
                                 <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
-                                <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio>
+                                {/* <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio> */}
                                 <Radio className='radio-btn' value="דנה הורוביץ | פורמולת S4">דנה הורוביץ | פורמולת S4</Radio>
                                 <Radio className='radio-btn' value="ניר כהן | מגמגום לדיבור">ניר כהן | מגמגום לדיבור</Radio>
                                 <Radio className='radio-btn' value="נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?">נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?</Radio>
                                 <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
-                                <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio>
+                                {/* <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio> */}
                                 <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
                             </Space>
                         </Radio.Group>
@@ -181,6 +184,20 @@ const Registration = () => {
                                 <Radio className='radio-btn' value="מוסדות+חינוך">מוסדות חינוך</Radio>
                                 <Radio className='radio-btn' value="מוסדות+אקדמיה">מוסדות אקדמיה</Radio>
                                 <Radio className='radio-btn' value="אחר">אחר</Radio>
+                            </Space>
+                        </Radio.Group>
+                    </Form.Item>
+                    <Form.Item
+                        className='form-item'
+                        name="bus"
+                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>האם תרצו להירשם להסעה?ֿ | ההסעה תצא מחניון ״חנה וסע״ בתל אביב | פתיחת ההסעה תלויה בכמות הנרשמים.</label>}
+                        rules={[{ required: true, message: 'האם תרצו להירשם להסעה?ֿ' }]}
+                    >
+                        <Radio.Group>
+                            <Space className='radio-container' direction="vertical">
+                                <Radio className='radio-btn' value="כן">כן</Radio>
+                                <Radio className='radio-btn' value="לא">לא</Radio>
+                                <Radio className='radio-btn' value="עוד לא יודע">עוד לא יודע</Radio>
                             </Space>
                         </Radio.Group>
                     </Form.Item>

@@ -7,6 +7,7 @@ import CountdownTimer from '../countdown/CountdownTimer.component';
 import Slider from '../slider/slider.component';
 import ParticipantsPreview from '../ParticipantsPreview/ParticipantsPreview.component';
 import FrontAnimation from '../FrontAnimation/FrontAnimation.component';
+import Luz from '../../components/Luz/Luz.component'
 import hadracha from '../../media/images/הדרכה.png';
 import kirya from '../../media/images/kirya.png';
 
@@ -63,9 +64,9 @@ const MainPage = (props) => {
                     </div>
 
                     <div className='text-pic-section text-pic-section2'>
-                        <div className='logos'>
+                        {/* <div className='logos'> */}
                             <div className='round-logo' style={{backgroundImage: `url(${kirya})`}}></div>
-                        </div>
+                        {/* </div> */}
                         
                         <div className='text-section text-section2'>
                             <motion.div ref={motionRef2} style={{ transform: isInView2 ? "none" : "translateX(-300px)", opacity: isInView2 ? 1 : 0, transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)" }}>
@@ -85,6 +86,7 @@ const MainPage = (props) => {
                 </div>
                 <SquareDetails></SquareDetails>
             </span>
+            <Luz></Luz>
 
         </div>
     );
