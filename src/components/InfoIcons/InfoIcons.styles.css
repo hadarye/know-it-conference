@@ -7,6 +7,7 @@
     background-image: url("../../media/images/calendar.svg");
     cursor: pointer;
     margin: 2rem 0;
+    background-repeat: no-repeat;
 }
 
 .waze-icon {
@@ -21,7 +22,6 @@
         border: none;
         background-color: transparent;
         background-size: contain;
-        background-repeat: no-repeat;
         cursor: pointer;
     }
 
