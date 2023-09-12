@@ -7,7 +7,7 @@ import { Button, Form, Input, Radio, Select, Space, notification } from 'antd';
 const Registration = () => {
     const [form] = Form.useForm();
     const [api, contextHolder] = notification.useNotification();
-    const [isConfirmed, setIsConfirmed] = useState(true);
+    const [isConfirmed, setIsConfirmed] = useState(false);
 
     const onFinish = useCallback(
         async ({ email, name, id, level, phone, seat1, seat2, unit, role, type, bus, bahad }) => {
