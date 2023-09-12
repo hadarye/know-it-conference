@@ -7,7 +7,7 @@ import { Button, Form, Input, Radio, Select, Space, notification } from 'antd';
 const Registration = () => {
     const [form] = Form.useForm();
     const [api, contextHolder] = notification.useNotification();
-    const [isConfirmed, setIsConfirmed] = useState(false);
+    const [isConfirmed, setIsConfirmed] = useState(true);
 
     const onFinish = useCallback(
         async ({ email, name, id, level, phone, seat1, seat2, unit, role, type, bus, bahad }) => {
@@ -128,7 +128,7 @@ const Registration = () => {
                                     {/* <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio> */}
                                     <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
                                     {/* <Radio value=""></Radio> */}
-
+                                    <Radio className='radio-btn' value="אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית">אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית</Radio>
                                 </Space>
                             </Radio.Group>
                         </Form.Item>
@@ -157,6 +157,7 @@ const Registration = () => {
                                     <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
                                     {/* <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio> */}
                                     <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
+                                    <Radio className='radio-btn' value="אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית">אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית</Radio>
                                 </Space>
                             </Radio.Group>
                         </Form.Item>
