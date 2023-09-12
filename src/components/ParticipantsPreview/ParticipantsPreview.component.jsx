@@ -26,6 +26,7 @@ const ParticipantsPreview = () => {
             "src": gila,
             "name": "פרופ' גילה קורץ",
             "topic": "אבולוציה אקדמאית",
+            "font-size": "1rem",
         },
         {
             "src": adi,
