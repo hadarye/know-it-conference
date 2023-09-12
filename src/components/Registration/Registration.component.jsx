@@ -113,7 +113,7 @@ const Registration = () => {
                             <Radio.Group>
                                 <Space className='radio-container' direction="vertical">
                                     <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
-                                    <Radio className='radio-btn' value="עדי ליבנה | מידה שמייצרת כוכבים בעיניים">עדי ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
+                                    <Radio className='radio-btn' value="עדי ליבנה | למידה שמייצרת כוכבים בעיניים">עדי ליבנה | למידה שמייצרת כוכבים בעיניים</Radio>
                                     <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
                                     <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
                                     <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
@@ -143,7 +143,7 @@ const Registration = () => {
                             <Radio.Group>
                                 <Space className='radio-container' direction="vertical">
                                     <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
-                                    <Radio className='radio-btn' value="עדי ליבנה | מידה שמייצרת כוכבים בעיניים">עדי ליבנה | מידה שמייצרת כוכבים בעיניים</Radio>
+                                    <Radio className='radio-btn' value="עדי ליבנה | למידה שמייצרת כוכבים בעיניים">עדי ליבנה | למידה שמייצרת כוכבים בעיניים</Radio>
                                     <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
                                     <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
                                     <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>

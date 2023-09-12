@@ -94,8 +94,9 @@ const ParticipantsPreview = () => {
         },
         {
             "src": leaKeren,
-            "name": 'ליאה אפגין  + קארן קמנצקי',
+            "name": 'ליאה אפגין וקארן קמנצקי',
             "topic": "שותפי למידה",
+            "font-size": "1rem",
         },
         {
             "src": aviv,
@@ -109,7 +110,7 @@ const ParticipantsPreview = () => {
             <h1 className='white-text header header-people'>המרצים והמרצות שלנו:</h1>
             <div className='people-container'>
                 {PEOPLE.map((element, index) => (
-                    <PersonPreview topic={element.topic} name={element.name} key={index} bg={element.src}></PersonPreview>
+                    <PersonPreview font={element['font-size']} topic={element.topic} name={element.name} key={index} bg={element.src}></PersonPreview>
                 ))}
             </div>
             <div className='see-more' onClick={() => {navigate("/lectures");  window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}}>
