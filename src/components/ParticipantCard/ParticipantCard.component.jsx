@@ -10,6 +10,9 @@ const ParticipantCard = (props) => {
                 <h1 className='participant-card-topic not-press'>{props.infoObj.topic}</h1>
                 <h3 className='participant-card-name not-press'>{props.infoObj.name}</h3>
                 <p className='participant-card-text not-press'>{props.infoObj["full-text"]}</p>
+                <div className='link-icons'>
+
+                </div>
             </div>
         </div>
 

@@ -1,6 +1,6 @@
 .people-container {
     display: flex;
-    width: 100%;
+    width: 85%;
     align-items: center;
     justify-content: space-between;
     margin-left: 10%;
