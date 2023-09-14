@@ -12,6 +12,7 @@ import gila from '../../media/images/people/gila.jpg';
 import daniel from '../../media/images/people/daniel_hackathon.jpg';
 import snir from '../../media/images/people/snir.jpg';
 import adi from '../../media/images/people/mia.png';
+import amir from '../../media/images/people/amir.jpg';
 import yaniv from '../../media/images/people/yaniv.jpg';
 import aviv from '../../media/images/people/aviv.jpg';
 import dana from '../../media/images/people/dana.png';
@@ -156,6 +157,13 @@ const ParticipantsPage = () => {
         "topic": "כשהופכים בינה למלאכותית החרדה היא טבעית.",
         "description": "בהרצאה נחשף לאיום של הבינה המלאכותית על עולמות הלמידה.",
         "full-text": " בהרצאה נחשף לאיום של הבינה המלאכותית על עולמות הלמידה ועם הרבה הומור, סטוריטלינג ושיתוף שלכם נחשף לשיטות ודרכי הוראה מותאמת שיצבעו את הבינה המלאכותית כהזדמנות ומנוע ללמידה אפיקטיבית."
+    },
+    { 
+        "img": amir,
+        "name": 'אמיר רוזנצוייג | יזם וטכנולוג, מנכ״ל חברת ARVR Israel - החברה המובילה לפיתוח הדרכה במציאות מדומה.',
+        "topic": "השיטה החדשה לאימונים והדרכה במציאות מדומה!",
+        "description": "בואו ללמוד איך גם אתם יכולים לשדרג את חווית הלמידה לאימרסיבית וחוויתית באמצעת מציאות מדומה ורבודה.",
+        "full-text": " בואו ללמוד איך גם אתם יכולים לשדרג  את חווית הלמידה לאימרסיבית וחווייתית באמצעות מציאות מדומה ורבודה. במהלך ההרצאה ישולבו הדגמות מוחשיות וריאליסטיות של סימולציות ותרחישים שנבנו על ידי חברת ARVR לגופים  מעולמות הבטחון והרפואה. במהלך ההרצאה תלמדו כיצד לעצב חוויית מציאות מדומה מותאמת אישית  לצרכים שלכם  על מנת להזניק אתכם לחזית הטכנולוגיה  החדשנית ביותר עם חוויית למידה מעצימה שמגשימה תוצאות הצלחה !"
     }]
 
 
