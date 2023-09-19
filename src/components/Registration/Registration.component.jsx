@@ -1,5 +1,5 @@
 
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useRef } from 'react';
 import './Registration.styles.css';
 import Confirmation from '../Confirmation/Confirmation.component';
 import { Button, Form, Input, Radio, Select, Space, notification } from 'antd';
@@ -7,7 +7,24 @@ import { Button, Form, Input, Radio, Select, Space, notification } from 'antd';
 const Registration = () => {
     const [form] = Form.useForm();
     const [api, contextHolder] = notification.useNotification();
+    const [isSubmited, setIsSubmited] = useState(false);
     const [isConfirmed, setIsConfirmed] = useState(false);
+
+    const SEATS = [
+        "עדי ליבנה | למידה שמייצרת כוכבים בעיניים",
+        "אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?",
+        "אלירן שקולניק | המהפכה המלאכותית",
+        "יעל פלד | ניצחון טכני",
+        "יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...",
+        "אריק אינגבר | AI works for me",
+        "דנה הורוביץ | יצירת סרטונים בקליק עם AI",
+        "ניר כהן | מגמגום לדיבור",
+        "נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?",
+        "עדן ביבס | איך להשתמש נכון בצ'אט GPT?",
+        "ליאה אפגין + קארן קמנצקי | שותפי למידה",
+        "אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית",
+        "אמיר רוזנצוייג | השיטה החדשה לאימונים והדרכה במציאות מדומה!"
+    ]
 
     const onFinish = useCallback(
         async ({ email, name, id, level, phone, seat1, seat2, unit, role, type, bus, bahad }) => {
@@ -38,13 +55,17 @@ const Registration = () => {
                 api.success({
                     message: 'Submitted successfully',
 
-                });
+                },
+                    setIsConfirmed(true),
+                    setIsSubmited(true)
+                );
                 form.resetFields();
-                setIsConfirmed(true);
             } catch (e) {
                 api.error({
                     message: e.message,
                 });
+                setIsConfirmed(false);
+                setIsSubmited(false);
             }
         },
         [api, form]
@@ -52,7 +73,7 @@ const Registration = () => {
 
     return (
         <>
-            {isConfirmed ? <Confirmation></Confirmation> : null}
+            {isSubmited ? <Confirmation></Confirmation> : null}
             <div className='form-container'>
 
                 <h1 className='participants-title' style={{ textAlign: `center`, margin: `10rem 0 0 0` }}>הרשמה לכנס</h1>
@@ -113,23 +134,12 @@ const Registration = () => {
                             <Radio.Group>
                                 <Space className='radio-container' direction="vertical">
                                     <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
-                                    <Radio className='radio-btn' value="עדי ליבנה | למידה שמייצרת כוכבים בעיניים">עדי ליבנה | למידה שמייצרת כוכבים בעיניים</Radio>
-                                    <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
-                                    <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
-                                    <Radio className='radio-btn' value="יעל פלד | ניצחון טכני">יעל פלד | ניצחון טכני</Radio>
+                                    {SEATS.map((name) => (
+                                        <Radio key={name} className='radio-btn' value={name}>{name}</Radio>
+                                    ))}
                                     {/* <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio> */}
-                                    <Radio className='radio-btn' value="יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...">יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...</Radio>
-                                    <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
                                     {/* <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio> */}
-                                    <Radio className='radio-btn' value="דנה הורוביץ | יצירת סרטונים בקליק עם AI">דנה הורוביץ | יצירת סרטונים בקליק עם AI</Radio>
-                                    <Radio className='radio-btn' value="ניר כהן | מגמגום לדיבור">ניר כהן | מגמגום לדיבור</Radio>
-                                    <Radio className='radio-btn' value="נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?">נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?</Radio>
-                                    <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
                                     {/* <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio> */}
-                                    <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
-                                    {/* <Radio value=""></Radio> */}
-                                    <Radio className='radio-btn' value="אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית">אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית</Radio>
-                                    <Radio className='radio-btn' value="אמיר רוזנצוייג | השיטה החדשה לאימונים והדרכה במציאות מדומה!">אמיר רוזנצוייג | השיטה החדשה לאימונים והדרכה במציאות מדומה!</Radio>
                                 </Space>
                             </Radio.Group>
                         </Form.Item>
@@ -143,23 +153,9 @@ const Registration = () => {
                         >
                             <Radio.Group>
                                 <Space className='radio-container' direction="vertical">
-                                    {/* <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio> */}
-                                    <Radio className='radio-btn' value="עדי ליבנה | למידה שמייצרת כוכבים בעיניים">עדי ליבנה | למידה שמייצרת כוכבים בעיניים</Radio>
-                                    <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
-                                    <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
-                                    <Radio className='radio-btn' value="יעל פלד | ניצחון טכני">יעל פלד | ניצחון טכני</Radio>
-                                    {/* <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio> */}
-                                    <Radio className='radio-btn' value="יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...">יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...</Radio>
-                                    <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
-                                    {/* <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio> */}
-                                    <Radio className='radio-btn' value="דנה הורוביץ | יצירת סרטונים בקליק עם AI">דנה הורוביץ | יצירת סרטונים בקליק עם AI</Radio>
-                                    <Radio className='radio-btn' value="ניר כהן | מגמגום לדיבור">ניר כהן | מגמגום לדיבור</Radio>
-                                    <Radio className='radio-btn' value="נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?">נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?</Radio>
-                                    <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
-                                    {/* <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio> */}
-                                    <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
-                                    <Radio className='radio-btn' value="אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית">אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית</Radio>
-                                    <Radio className='radio-btn' value="אמיר רוזנצוייג | השיטה החדשה לאימונים והדרכה במציאות מדומה!">אמיר רוזנצוייג | השיטה החדשה לאימונים והדרכה במציאות מדומה!</Radio>
+                                    {SEATS.map((name) => (
+                                        <Radio key={name} className='radio-btn' value={name}>{name}</Radio>
+                                    ))}
                                 </Space>
                             </Radio.Group>
                         </Form.Item>
@@ -191,17 +187,17 @@ const Registration = () => {
                                     <Radio className='radio-btn' value="תעשייה">תעשייה</Radio>
                                     <Radio className='radio-btn' value="צה״ל">צה״ל</Radio>
                                     <Radio className='radio-btn' value="ממשלתי">ממשלתי</Radio>
-                                    <Radio className='radio-btn' value="מוסדות+חינוך">מוסדות חינוך</Radio>
-                                    <Radio className='radio-btn' value="מוסדות+אקדמיה">מוסדות אקדמיה</Radio>
+                                    <Radio className='radio-btn' value="מוסדות חינוך">מוסדות חינוך</Radio>
+                                    <Radio className='radio-btn' value="מוסדות אקדמיה">מוסדות אקדמיה</Radio>
                                     <Radio className='radio-btn' value="אחר">אחר</Radio>
                                 </Space>
                             </Radio.Group>
                         </Form.Item>
-                        <Form.Item     
-                        className='form-item form-select'
-                        name="bahad"
-                        label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>אם הינכם משרתים בקריית ההדרכה: בחרו בבה״ד שלכם.</label>}
-                        rules={[{ required: false }]}>
+                        <Form.Item
+                            className='form-item form-select'
+                            name="bahad"
+                            label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>אם הינכם משרתים בקריית ההדרכה: בחרו בבה״ד שלכם.</label>}
+                            rules={[{ required: false }]}>
                             <Select
                                 initialvalues="בחר"
                                 // style={{
