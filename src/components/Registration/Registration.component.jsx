@@ -118,10 +118,10 @@ const Registration = () => {
                                     <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
                                     <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
                                     {/* <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio> */}
-                                    <Radio className='radio-btn' value="יניב קרמר | משאבי אנוש בעולם החדש">יניב קרמר | משאבי אנוש בעולם החדש</Radio>
+                                    <Radio className='radio-btn' value="יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...">יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...</Radio>
                                     <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
                                     {/* <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio> */}
-                                    <Radio className='radio-btn' value="דנה הורוביץ | פורמולת S4">דנה הורוביץ | פורמולת S4</Radio>
+                                    <Radio className='radio-btn' value="דנה הורוביץ | יצירת סרטונים בקליק עם AI">דנה הורוביץ | יצירת סרטונים בקליק עם AI</Radio>
                                     <Radio className='radio-btn' value="ניר כהן | מגמגום לדיבור">ניר כהן | מגמגום לדיבור</Radio>
                                     <Radio className='radio-btn' value="נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?">נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?</Radio>
                                     <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
@@ -129,6 +129,7 @@ const Registration = () => {
                                     <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
                                     {/* <Radio value=""></Radio> */}
                                     <Radio className='radio-btn' value="אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית">אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית</Radio>
+                                    <Radio className='radio-btn' value="אמיר רוזנצוייג | השיטה החדשה לאימונים והדרכה במציאות מדומה!">אמיר רוזנצוייג | השיטה החדשה לאימונים והדרכה במציאות מדומה!</Radio>
                                 </Space>
                             </Radio.Group>
                         </Form.Item>
@@ -148,16 +149,17 @@ const Registration = () => {
                                     <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
                                     <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
                                     {/* <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio> */}
-                                    <Radio className='radio-btn' value="יניב קרמר | משאבי אנוש בעולם החדש">יניב קרמר | משאבי אנוש בעולם החדש</Radio>
+                                    <Radio className='radio-btn' value="יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...">יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...</Radio>
                                     <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
                                     {/* <Radio className='radio-btn' value="יונתן חצור | איך לגרום לאחרים להזיז הרים">יונתן חצור | איך לגרום לאחרים להזיז הרים</Radio> */}
-                                    <Radio className='radio-btn' value="דנה הורוביץ | פורמולת S4">דנה הורוביץ | פורמולת S4</Radio>
+                                    <Radio className='radio-btn' value="דנה הורוביץ | יצירת סרטונים בקליק עם AI">דנה הורוביץ | יצירת סרטונים בקליק עם AI</Radio>
                                     <Radio className='radio-btn' value="ניר כהן | מגמגום לדיבור">ניר כהן | מגמגום לדיבור</Radio>
                                     <Radio className='radio-btn' value="נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?">נתנאל רייכר | כיצד מעשירים את תהליכי ההדרכה ומגשרים בין ההדרכה לתהליכי הליווי בביצוע?</Radio>
                                     <Radio className='radio-btn' value="עדן ביבס | איך להשתמש נכון בצ'אט GPT?">עדן ביבס | איך להשתמש נכון בצ'אט GPT?</Radio>
                                     {/* <Radio className='radio-btn' value="פיינשטיין שניר | הטמעת תוצרי הדרכה">פיינשטיין שניר | הטמעת תוצרי הדרכה</Radio> */}
                                     <Radio className='radio-btn' value="ליאה אפגין + קארן קמנצקי | שותפי למידה">ליאה אפגין + קארן קמנצקי | שותפי למידה</Radio>
                                     <Radio className='radio-btn' value="אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית">אביב ואנונו | כשהופכים בינה למלאכותית החרדה היא טבעית</Radio>
+                                    <Radio className='radio-btn' value="אמיר רוזנצוייג | השיטה החדשה לאימונים והדרכה במציאות מדומה!">אמיר רוזנצוייג | השיטה החדשה לאימונים והדרכה במציאות מדומה!</Radio>
                                 </Space>
                             </Radio.Group>
                         </Form.Item>
