@@ -46,7 +46,7 @@ const ParticipantsPreview = () => {
         {
             "src": yael,
             "name": "יעל פלד",
-            "topic": "מעבר לשעמום",
+            "topic": "ניצחון טכני",
         },
         {
             "src": erik,

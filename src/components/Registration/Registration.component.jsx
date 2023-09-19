@@ -116,7 +116,7 @@ const Registration = () => {
                                     <Radio className='radio-btn' value="עדי ליבנה | למידה שמייצרת כוכבים בעיניים">עדי ליבנה | למידה שמייצרת כוכבים בעיניים</Radio>
                                     <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
                                     <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
-                                    <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
+                                    <Radio className='radio-btn' value="יעל פלד | ניצחון טכני">יעל פלד | ניצחון טכני</Radio>
                                     {/* <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio> */}
                                     <Radio className='radio-btn' value="יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...">יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...</Radio>
                                     <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
@@ -147,7 +147,7 @@ const Registration = () => {
                                     <Radio className='radio-btn' value="עדי ליבנה | למידה שמייצרת כוכבים בעיניים">עדי ליבנה | למידה שמייצרת כוכבים בעיניים</Radio>
                                     <Radio className='radio-btn' value="אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?">אורית ברוידס | חדשנות: איך להישאר רלוונטים בעולם משתנה?</Radio>
                                     <Radio className='radio-btn' value="אלירן שקולניק | המהפכה המלאכותית">אלירן שקולניק | המהפכה המלאכותית</Radio>
-                                    <Radio className='radio-btn' value="יעל פלד | מעבר לשעמום">יעל פלד | מעבר לשעמום</Radio>
+                                    <Radio className='radio-btn' value="יעל פלד | ניצחון טכני">יעל פלד | ניצחון טכני</Radio>
                                     {/* <Radio className='radio-btn' value="דניאל אנדרסון | שיטת Agile בתהליכי למידה">דניאל אנדרסון | שיטת Agile בתהליכי למידה</Radio> */}
                                     <Radio className='radio-btn' value="יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...">יניב קרמר | ניהול קריירה בשירות הAI - לא מה שחשבתם...</Radio>
                                     <Radio className='radio-btn' value="אריק אינגבר | AI works for me"> אריק אינגבר | AI works for me</Radio>
