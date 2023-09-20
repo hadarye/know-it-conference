@@ -53,8 +53,8 @@ const Registration = () => {
                     }
                 );
                 // Check for status code 200 (success)
-                console.log(response);
-                if (response.status >= 200 && response.status < 400) {
+                // console.log(response);
+                // if (response.status >= 200 && response.status < 400) {
                     api.success({
                         message: 'Submitted successfully',
                     },
@@ -62,16 +62,16 @@ const Registration = () => {
                         setIsSubmited(true)
                     );  
                     form.resetFields();
-                } else {
-                    api.error({
-                        message: 'error',
-                    });
-                }
+                // } else {
+                //     api.error({
+                //         message: 'error',
+                //     });
+                // }
             } catch (e) {
-                api.open({
-                    message: 'Error Occured',
-                    duration: 0,
-                  });
+                // api.open({
+                //     message: 'Error Occured',
+                //     duration: 0,
+                //   });
                 api.error({
                     message: e.message,
                 });
@@ -84,8 +84,8 @@ const Registration = () => {
 
     return (
         <>
-            {/* {isSubmited ? <Confirmation></Confirmation> : null} */}
-            {contextHolder}
+            {isSubmited ? <Confirmation></Confirmation> : null}
+            {/* {contextHolder} */}
             <div className='form-container'>
 
                 <h1 className='participants-title' style={{ textAlign: `center`, margin: `10rem 0 0 0` }}>הרשמה לכנס</h1>
@@ -145,7 +145,7 @@ const Registration = () => {
                         >
                             <Radio.Group>
                                 <Space className='radio-container' direction="vertical">
-                                    <Radio className='radio-btn' value="פרופ׳ גילה קורץ |  hאבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
+                                    <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
                                     {SEATS.map((name) => (
                                         <Radio key={name} className='radio-btn' value={name}>{name}</Radio>
                                     ))}
@@ -209,12 +209,13 @@ const Registration = () => {
                             className='form-item form-select'
                             name="bahad"
                             label={<label style={{ fontSize: "1.7rem", fontFamily: 'assistant' }}>אם הינכם משרתים בקריית ההדרכה: בחרו בבה״ד שלכם.</label>}
-                            rules={[{ required: false }]}>
+                            rules={[{ required: true, message: 'אנא בחרו בבה״ד שלכם. אם אינכם משרתים בקרית ההדרכה - בחרו באפשרות ״בחר״' }]}>
                             <Select
-                                initialvalues="בחר"
-                                // style={{
-                                //     width: 400,
-                                // }}
+                                initialvalues={{
+                                    value: 'בחר',
+                                    label: 'בחר',
+                                }}
+
                                 options={[{
                                     value: 'בחר',
                                     label: 'בחר',
