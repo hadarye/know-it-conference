@@ -96,7 +96,7 @@ const ParticipantsPreview = () => {
         {
             "src": leaKeren,
             "name": 'ליאה אפגין וקארן קמנצקי',
-            "topic": "שותפי למידה",
+            "topic": "מכפיל כוח",
             "font-size": "1rem",
         },
         {
