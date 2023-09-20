@@ -29,7 +29,7 @@ const Registration = () => {
     const onFinish = useCallback(
         async ({ email, name, id, level, phone, seat1, seat2, unit, role, type, bus, bahad }) => {
             try {
-                await fetch(
+                const response = await fetch(
                     // https://docs.google.com/forms/d/e/1FAIpQLScjYm6gcS-WCMMAO2Pxo7oxa2advDvmHXtBK2e8b1h8mOl-gA/viewform?usp=pp_url&entry.934400202=1&entry.1784291486=2&entry.1115520134=3&entry.860340030=4&entry.590287215=%D7%A4%D7%A8%D7%95%D7%A4%D7%B3+%D7%92%D7%99%D7%9C%D7%94+%D7%A7%D7%95%D7%A8%D7%A5+%7C+%D7%90%D7%91%D7%95%D7%9C%D7%95%D7%A6%D7%99%D7%94+%D7%90%D7%A7%D7%93%D7%9E%D7%90%D7%99%D7%AA&entry.1127533607=%D7%A4%D7%A8%D7%95%D7%A4%D7%B3+%D7%92%D7%99%D7%9C%D7%94+%D7%A7%D7%95%D7%A8%D7%A5+%7C+%D7%90%D7%91%D7%95%D7%9C%D7%95%D7%A6%D7%99%D7%94+%D7%90%D7%A7%D7%93%D7%9E%D7%90%D7%99%D7%AA&entry.1560729842=5&entry.1914024005=6&entry.1642695268=%D7%9B%D7%95%D7%97%D7%95%D7%AA+%D7%94%D7%91%D7%98%D7%97%D7%95%D7%9F&entry.349923372=%D7%91%D7%97%D7%A8&entry.1005952753=%D7%9B%D7%9F
                     // https://docs.google.com/forms/d/e/1FAIpQLScjYm6gcS-WCMMAO2Pxo7oxa2advDvmHXtBK2e8b1h8mOl-gA/viewform?usp=pp_url&entry.934400202=1&entry.1784291486=2&entry.1115520134=3&entry.860340030=4&entry.590287215=%D7%90%D7%9C%D7%99%D7%A8%D7%9F+%D7%A9%D7%A7%D7%95%D7%9C%D7%A0%D7%99%D7%A7+-+%D7%94%D7%9E%D7%94%D7%A4%D7%9B%D7%94+%D7%94%D7%9E%D7%9C%D7%90%D7%9B%D7%95%D7%AA%D7%99%D7%AA&entry.1127533607=%D7%90%D7%9C%D7%99%D7%A8%D7%9F+%D7%A9%D7%A7%D7%95%D7%9C%D7%A0%D7%99%D7%A7+-+%D7%94%D7%9E%D7%94%D7%A4%D7%9B%D7%94+%D7%94%D7%9E%D7%9C%D7%90%D7%9B%D7%95%D7%AA%D7%99%D7%AA&entry.1560729842=5&entry.1914024005=6&entry.1642695268=%D7%9B%D7%95%D7%97%D7%95%D7%AA+%D7%94%D7%91%D7%98%D7%97%D7%95%D7%9F&entry.1005952753=%D7%9B%D7%9F
                     // https://docs.google.com/forms/d/e/1FAIpQLScjYm6gcS-WCMMAO2Pxo7oxa2advDvmHXtBK2e8b1h8mOl-gA/viewform?usp=pp_url&entry.934400202=name&entry.1784291486=id&entry.1115520134=rank&entry.860340030=phone&entry.590287215=%D7%90%D7%9C%D7%99%D7%A8%D7%9F+%D7%A9%D7%A7%D7%95%D7%9C%D7%A0%D7%99%D7%A7+-+%D7%94%D7%9E%D7%94%D7%A4%D7%9B%D7%94+%D7%94%D7%9E%D7%9C%D7%90%D7%9B%D7%95%D7%AA%D7%99%D7%AA&entry.1127533607=%D7%99%D7%A2%D7%9C+%D7%A4%D7%9C%D7%93+-+%D7%9E%D7%A2%D7%91%D7%A8+%D7%9C%D7%A9%D7%A2%D7%9E%D7%95%D7%9D&entry.1560729842=unit&entry.1914024005=role&entry.1642695268=%D7%9B%D7%95%D7%97%D7%95%D7%AA+%D7%94%D7%91%D7%98%D7%97%D7%95%D7%9F
@@ -52,15 +52,26 @@ const Registration = () => {
                         mode: 'no-cors',
                     }
                 );
-                api.success({
-                    message: 'Submitted successfully',
-
-                },
-                    setIsConfirmed(true),
-                    setIsSubmited(true)
-                );
-                form.resetFields();
+                // Check for status code 200 (success)
+                console.log(response);
+                if (response.status >= 200 && response.status < 400) {
+                    api.success({
+                        message: 'Submitted successfully',
+                    },
+                        setIsConfirmed(true),
+                        setIsSubmited(true)
+                    );  
+                    form.resetFields();
+                } else {
+                    api.error({
+                        message: 'error',
+                    });
+                }
             } catch (e) {
+                api.open({
+                    message: 'Error Occured',
+                    duration: 0,
+                  });
                 api.error({
                     message: e.message,
                 });
@@ -73,7 +84,8 @@ const Registration = () => {
 
     return (
         <>
-            {isSubmited ? <Confirmation></Confirmation> : null}
+            {/* {isSubmited ? <Confirmation></Confirmation> : null} */}
+            {contextHolder}
             <div className='form-container'>
 
                 <h1 className='participants-title' style={{ textAlign: `center`, margin: `10rem 0 0 0` }}>הרשמה לכנס</h1>
@@ -133,7 +145,7 @@ const Registration = () => {
                         >
                             <Radio.Group>
                                 <Space className='radio-container' direction="vertical">
-                                    <Radio className='radio-btn' value="פרופ׳ גילה קורץ | אבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
+                                    <Radio className='radio-btn' value="פרופ׳ גילה קורץ |  hאבולוציה אקדמאית">פרופ׳ גילה קורץ | אבולוציה אקדמאית</Radio>
                                     {SEATS.map((name) => (
                                         <Radio key={name} className='radio-btn' value={name}>{name}</Radio>
                                     ))}
