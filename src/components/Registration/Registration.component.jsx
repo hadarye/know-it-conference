@@ -55,13 +55,13 @@ const Registration = () => {
                 // Check for status code 200 (success)
                 // console.log(response);
                 // if (response.status >= 200 && response.status < 400) {
-                    api.success({
-                        message: 'Submitted successfully',
-                    },
-                        setIsConfirmed(true),
-                        setIsSubmited(true)
-                    );  
-                    form.resetFields();
+                api.success({
+                    message: 'Submitted successfully',
+                },
+                    setIsConfirmed(true),
+                    setIsSubmited(true)
+                );
+                form.resetFields();
                 // } else {
                 //     api.error({
                 //         message: 'error',
@@ -88,9 +88,11 @@ const Registration = () => {
             {/* {contextHolder} */}
             <div className='form-container'>
 
-                <h1 className='participants-title' style={{ textAlign: `center`, margin: `10rem 0 0 0` }}>הרשמה לכנס</h1>
+                <h1 className='participants-title' id="registrationTitle">הרשמה לכנס</h1>
                 <p className='registration-text'>ההרשמה מיועדת לאנשים העוסקים בפיתוח הדרכה בצבא, בתעשייה, באקדמיה ולמנהלי
                     הדרכה.</p>
+                <p className='registration-text'>יש לוודא קבלת מייל אישור הרשמה עם פרטי ההרצאות המבוקשות. במידה ולא התקבלה הודעה יש לבדוק בתיבת הספאם או לפנות אלינו במייל:</p>
+                <a className='registration-text' href="mailto:know.it.till@gmail.com">know.it.till@gmail.com</a>
                 <Form
                     form={form}
                     onFinish={onFinish}
