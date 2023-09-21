@@ -73,6 +73,9 @@
 
 .registration-text {
     font-size: 1.5rem;
+    width: 90%;
+    margin: 0;
+    margin-bottom: 1rem;
 }
 
 .ant-select-selector {
@@ -101,6 +104,11 @@
     
 }
 
+#registrationTitle {
+    text-align: center;
+    margin: 5rem 0 0 0;
+}
+
 
 @media only screen and (min-width: 768px) {
     #submitBtn {
@@ -123,6 +131,10 @@
 
     .radio-btn {
         font-size: 1.5rem !important;
+    }
+
+    #registrationTitle {
+        margin: 10rem 0 0 0;
     }
 
 }
