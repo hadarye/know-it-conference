@@ -43,7 +43,7 @@
 
 .form-input {
     border: solid 1px black;
-    height: 4rem;
+    height: 3rem;
     border-radius: 50px 50px 0 50px;
     font-size: 1.2rem;
     font-family: assistant;
@@ -72,7 +72,7 @@
 }
 
 .registration-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 90%;
     margin: 0;
     margin-bottom: 1rem;
@@ -127,6 +127,7 @@
     
     .form-input {
         font-size: 1.5rem;
+        height: 4rem;
     }
 
     .radio-btn {
