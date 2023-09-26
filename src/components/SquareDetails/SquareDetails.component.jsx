@@ -44,7 +44,7 @@ const SquareDetails = (props) => {
                     <InfoIcons></InfoIcons>
 
                 </div>
-                
+                {/* <p>הרשמתך נקלטה במערכת בהצלחה. </p><p>בחירתך למושב הראשון:</p><p>{{מושב 1}} </p><p>בחירתך למושב השני:</p><p>{{מושב 2}} </p><p>הכנס יתקיים בקריית ההדרכה בנגב בתאריך 8.11</p><p>לפרטים נוספים הסתכלו באתר: <a href="https://madortill.github.io/knowit-2023/#/home" rel="noopener noreferrer" target="_blank">https://madortill.github.io/knowit-2023/#/home</a></p><p>לשאלות ובקשות פנו אלינו במייל :</p><p>know.it.till@gmail.com</p> */}
             </div>
 
         </div>

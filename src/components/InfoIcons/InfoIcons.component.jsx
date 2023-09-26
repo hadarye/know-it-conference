@@ -10,10 +10,10 @@ const InfoIcons = () => {
                 e.preventDefault();
                 atcb_action({
                     name: "כנס חדשנות בלמידה",
-                    startDate: "2022-11-22",
+                    startDate: "2023-11-08",
                     startTime: "08:30",
                     endTime: "15:30",
-                    endDate: "2022-11-22",
+                    endDate: "2023-11-08",
                     buttonStyle: "3d",
                     options: ['Apple', 'Google', 'Microsoft365', 'Outlook.com', 'Yahoo'],
                     timeZone: "Asia/Jerusalem",
