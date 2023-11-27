@@ -9,7 +9,7 @@ import { useState } from "react";
 import './App.css';
 
 function App() {
-  const event_date = new Date('2024-11-08T08:00:00');
+  const event_date = new Date('2024-01-08T08:00:00');
   const dateTimeAfterNumDays = event_date;
   const [isMenu, setIsMenu] = useState();
   const [isDate, setIsDate] = useState();
